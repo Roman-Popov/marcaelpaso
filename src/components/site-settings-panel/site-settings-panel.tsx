@@ -10,13 +10,14 @@ import { LanguageSelector } from '../language-selector';
 export type SiteSettingsPanelProps = {
   colorMode: PaletteMode,
   toggleColorMode: () => void,
+  reversed?: boolean,
 };
 
 const SiteSettingsPanel = (props: SiteSettingsPanelProps) => {
-  const { colorMode, toggleColorMode } = props;
+  const { colorMode, toggleColorMode, reversed = false } = props;
 
   return (
-    <Stack direction="row" spacing={1}>
+    <Stack direction={reversed ? 'row-reverse' : 'row'} spacing={1}>
       <LanguageSelector />
       <IconButton
         onClick={toggleColorMode}

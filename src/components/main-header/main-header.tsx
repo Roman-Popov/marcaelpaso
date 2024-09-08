@@ -6,7 +6,8 @@ import {
   Toolbar,
 } from '@mui/material';
 import { PaletteMode, styled, alpha } from '@mui/material/styles';
-import { Desktop } from '../responsive-wrappers';
+import { TabletAndBelow, Desktop } from '../responsive-wrappers';
+import { MobileHeader } from '../mobile-header';
 import { NotUnderlinedLink } from '../not-underlined-link';
 import { DesktopHeader } from '../desktop-header';
 
@@ -50,6 +51,9 @@ const MainHeader = (props: MainHeaderProps) => {
           <Desktop>
             <DesktopHeader colorMode={colorMode} toggleColorMode={toggleColorMode} />
           </Desktop>
+          <TabletAndBelow>
+            <MobileHeader colorMode={colorMode} toggleColorMode={toggleColorMode} />
+          </TabletAndBelow>
         </StyledToolbar>
       </Container>
     </AppBar>
