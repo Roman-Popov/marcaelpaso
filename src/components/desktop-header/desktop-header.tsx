@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react';
 import { Box, Button } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 import { SiteSettingsPanel, type SiteSettingsPanelProps } from '../site-settings-panel';
 import { NotUnderlinedLink } from '../not-underlined-link';
 
@@ -15,32 +16,34 @@ const LinkButton = forwardRef(({ children, ...restProps }: { children: React.Rea
 const DesktopHeader = (props: DesktopHeaderProps) => {
   const { colorMode, toggleColorMode } = props;
 
+  const { t } = useTranslation();
+
   return (
     <Box sx={{
       display: 'flex',
       flex: 1,
       justifyContent: 'space-between',
-      ml: 2,
+      ml: 1.5,
     }}
     >
       <Box>
         <NotUnderlinedLink href="#about" component={LinkButton}>
-          About
+          {t('header.about')}
         </NotUnderlinedLink>
         <NotUnderlinedLink href="#schedule" component={LinkButton}>
-          Schedule
+          {t('header.schedule')}
         </NotUnderlinedLink>
         <NotUnderlinedLink href="#pricing" component={LinkButton}>
-          Pricing
+          {t('header.pricing')}
         </NotUnderlinedLink>
         <NotUnderlinedLink href="#location" component={LinkButton}>
-          Location
+          {t('header.location')}
         </NotUnderlinedLink>
         <NotUnderlinedLink href="#gallery" component={LinkButton}>
-          Gallery
+          {t('header.gallery')}
         </NotUnderlinedLink>
         <NotUnderlinedLink href="#contacts" component={LinkButton}>
-          Contacts
+          {t('header.contacts')}
         </NotUnderlinedLink>
       </Box>
       <SiteSettingsPanel {...{ colorMode, toggleColorMode }} />
