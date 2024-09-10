@@ -12,4 +12,10 @@ export const translationsEn = {
     russian: 'Russian',
     spanish: 'Spanish',
   },
+  socials: {
+    email: 'Email',
+    phone: 'Call',
+    telegram: 'Telegram',
+    whatsApp: 'WhatsApp',
+  },
 };
