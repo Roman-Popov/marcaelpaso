@@ -21,6 +21,7 @@
     "i18next": "^23.12.2",
     "i18next-browser-languagedetector": "^8.0.0",
     "lodash": "^4.17.21",
+    "md5": "^2.3.0",
     "normalize.css": "^8.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -30,6 +31,7 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
+    "@types/md5": "^2.3.5",
     "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^16.2.0",
