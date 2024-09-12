@@ -9,13 +9,14 @@ import {
   PhoneRounded as PhoneIcon,
 } from '@mui/icons-material';
 import { useTranslation } from 'react-i18next';
+import { TELEGRAM_ID, DOMAIN, PHONE_NUMBER } from '../../constants';
 import { NotUnderlinedLink } from '../not-underlined-link';
 
 const actions = [
-  { icon: <TelegramIcon />, code: 'telegram', href: `https://t.me/${process.env.REACT_APP_TELEGRAM_ID}` },
-  { icon: <WhatsAppIcon />, code: 'whatsApp', href: `https://wa.me/${process.env.REACT_APP_PHONE_NUMBER}` },
-  { icon: <PhoneIcon />, code: 'phone', href: `tel:${process.env.REACT_APP_DOMAIN}` },
-  { icon: <MailIcon />, code: 'email', href: `mailto:studio@${process.env.REACT_APP_DOMAIN}` },
+  { icon: <TelegramIcon />, code: 'telegram', href: `https://t.me/${TELEGRAM_ID}` },
+  { icon: <WhatsAppIcon />, code: 'whatsApp', href: `https://wa.me/${PHONE_NUMBER}` },
+  { icon: <PhoneIcon />, code: 'phone', href: `tel:${PHONE_NUMBER}` },
+  { icon: <MailIcon />, code: 'email', href: `mailto:studio@${DOMAIN}` },
 ];
 
 const SpeedDial = () => {
