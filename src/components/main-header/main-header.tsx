@@ -43,7 +43,7 @@ const MainHeader = (props: MainHeaderProps) => {
         mt: 3,
       }}
     >
-      <Container maxWidth="lg">
+      <Container maxWidth="md">
         <StyledToolbar variant="dense" disableGutters>
           <NotUnderlinedLink href="/">
             <Avatar alt="Marca el Paso" src={`${process.env.PUBLIC_URL}logo512.png`} />

@@ -155,6 +155,7 @@ export const getDesignTokens = (mode: PaletteMode) => ({
       ...gray,
     },
     divider: mode === 'dark' ? alpha(gray[700], 0.6) : alpha(gray[300], 0.4),
+    dividerLight: mode === 'dark' ? alpha(gray[700], 0.35) : alpha(gray[300], 0.25),
     background: {
       default: 'hsl(0, 0%, 99%)',
       paper: 'hsl(220, 35%, 97%)',
@@ -231,6 +232,6 @@ export const getDesignTokens = (mode: PaletteMode) => ({
     'none',
     ...(mode === 'dark'
       ? 'hsla(220, 30%, 5%, 0.7) 0px 4px 16px 0px, hsla(220, 25%, 10%, 0.8) 0px 8px 16px -5px'
-      : 'hsla(220, 30%, 5%, 0.07) 0px 4px 16px 0px, hsla(220, 25%, 10%, 0.07) 0px 8px 16px -5px')
+      : 'hsla(220, 30%, 5%, 0.07) 0px 4px 16px 0px, hsla(220, 25%, 10%, 0.07) 0px 8px 16px -5px'),
   ] as Shadows,
 });

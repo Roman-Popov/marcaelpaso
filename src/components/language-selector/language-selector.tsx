@@ -9,8 +9,6 @@ import {
 import { useTranslation } from 'react-i18next';
 import { FlagIcon } from '../flag-icon';
 
-type LanguageType = 'ru' | 'es' | 'en';
-
 const LanguageSelector = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
