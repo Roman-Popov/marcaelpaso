@@ -32,7 +32,7 @@ const MobileHeader = (props: MobileHeaderProps) => {
   const menuItemCommonProps = {
     component: NotUnderlinedLink,
     onClick: closeDrawer,
-    sx: { width: 'auto', fontWeight: 500 },
+    sx: { width: 'auto', fontWeight: 500, px: { xs: 2.25, sm: 2.25 } },
   };
 
   return (
@@ -41,13 +41,19 @@ const MobileHeader = (props: MobileHeaderProps) => {
         <MenuIcon />
       </IconButton>
       <Drawer anchor="top" open={open} onClose={closeDrawer}>
-        <Box sx={{ p: 2, pt: 4, backgroundColor: 'background.default' }}>
+        <Box sx={{
+          px: { xs: 2, sm: 3 },
+          pt: { xs: 4, sm: 5 },
+          pb: 3,
+          backgroundColor: 'background.default',
+        }}
+        >
           <Box
             sx={{
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
-              px: 2,
+              px: { xs: 1, sm: 2 },
             }}
           >
             <SiteSettingsPanel reversed {...{ colorMode, toggleColorMode }} />
@@ -56,7 +62,7 @@ const MobileHeader = (props: MobileHeaderProps) => {
             </IconButton>
           </Box>
           <Divider sx={{ my: 3 }} />
-          <Box sx={{ px: 2 }}>
+          <Box>
             <MenuItem href="#about" {...menuItemCommonProps}>
               {t('header.about')}
             </MenuItem>

@@ -24,7 +24,7 @@ const SpeedDial = () => {
   return (
     <MUISpeedDial
       ariaLabel="contacts"
-      sx={{ position: 'absolute', bottom: 24, right: 24 }}
+      sx={{ position: 'fixed', bottom: 24, right: 24 }}
       icon={(
         <SpeedDialIcon
           icon={<ContactsIcon />}

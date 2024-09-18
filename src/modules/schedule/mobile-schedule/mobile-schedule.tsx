@@ -23,7 +23,7 @@ const MobileSchedule = (props: MobileScheduleProps) => {
       {
         scheduleData?.length
           ? scheduleData.map(({ weekday, lessons }) => (
-            <Stack spacing={0.5}>
+            <Stack key={weekday} spacing={0.5}>
               <Typography fontWeight="bold" fontSize="1.15em" textAlign="center">
                 {t(`weekdays.${weekday}`)}
               </Typography>
@@ -43,13 +43,18 @@ const MobileSchedule = (props: MobileScheduleProps) => {
                 ]}
               >
                 <Stack spacing={2} divider={<Divider />}>
-                  {lessons.map(({
-                    from,
-                    to,
-                    what,
-                    who,
-                  }) => (
+                  {lessons.map((
+                    {
+                      from,
+                      to,
+                      what,
+                      who,
+                    },
+                    index
+                  ) => (
                     <Stack
+                      // eslint-disable-next-line react/no-array-index-key
+                      key={index}
                       direction="row"
                       divider={<Divider orientation="vertical" flexItem />}
                       spacing={{ xs: 1, sm: 2 }}
