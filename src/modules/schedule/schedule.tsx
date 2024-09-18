@@ -1,18 +1,13 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import {
-  Card,
-  CardContent,
-  Container,
-  Grid2 as Grid,
-  Typography,
-} from '@mui/material';
+import { Card, Container } from '@mui/material';
 import { sortBy } from 'lodash';
-import { configureRequest, type MaybeCancelError } from '../../utils/configure-request';
-import { ScheduleDay } from './subcomponents/schedule-day';
-import { NoDataBlock } from './subcomponents/no-data-block';
+import { configureRequest, type MaybeCancelError } from 'utils/configure-request';
+import { TabletAndBelow, Desktop } from 'components/responsive-wrappers';
 import { SCHEDULE_ENDPOINT } from './schedule-endpoint';
 import type { RawScheduleType, LessonType } from './schedule-types';
+import { DesktopSchedule } from './desktop-schedule';
+import { MobileSchedule } from './mobile-schedule';
 
 const weekdayKeys = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'] as WeekdayType[];
 
@@ -40,7 +35,7 @@ const Schedule = () => {
     };
   }, []);
 
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const selectedLanguage = i18n.language.split('-')[0] as LanguageType;
   const scheduleData = useMemo(() => {
     if (!rawScheduleData) {
@@ -79,33 +74,13 @@ const Schedule = () => {
 
   return (
     <Container maxWidth="md">
-      <Card>
-        <CardContent>
-          <Grid container columns={4} spacing={2} rowSpacing={1}>
-            <Grid offset={1} size={1}>
-              <Typography fontWeight="bold" fontSize="1.15em">
-                {t('schedule.time')}
-              </Typography>
-            </Grid>
-            <Grid size={1}>
-              <Typography fontWeight="bold" fontSize="1.15em">
-                {t('schedule.subject')}
-              </Typography>
-            </Grid>
-            <Grid size={1}>
-              <Typography fontWeight="bold" fontSize="1.15em">
-                {t('schedule.teachers')}
-              </Typography>
-            </Grid>
-            {
-              scheduleData?.length
-                ? scheduleData.map(({ weekday, lessons }) => (
-                  <ScheduleDay key={weekday} weekday={weekday} lessons={lessons} />
-                ))
-                : <NoDataBlock type={scheduleData ? 'loading' : 'error'} />
-            }
-          </Grid>
-        </CardContent>
+      <Card sx={{ px: { sm: 2, xs: 1 } }}>
+        <Desktop>
+          <DesktopSchedule scheduleData={scheduleData} />
+        </Desktop>
+        <TabletAndBelow>
+          <MobileSchedule scheduleData={scheduleData} />
+        </TabletAndBelow>
       </Card>
     </Container>
   );

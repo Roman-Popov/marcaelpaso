@@ -80,7 +80,7 @@ export const surfacesCustomizations: Components<Theme> = {
                 background: alpha(gray[900], 0.4),
               }),
             },
-          }
+          },
         ],
       }),
     },

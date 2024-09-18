@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Grid2 as Grid } from '@mui/material';
-import type { LessonType } from '../../schedule-types';
+import type { LessonType } from '../../../schedule-types';
 
 const ScheduleLesson = (props: LessonType) => {
   const {

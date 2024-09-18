@@ -22,7 +22,6 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   borderColor: theme.palette.divider,
   backgroundColor: alpha(theme.palette.background.default, 0.4),
   boxShadow: theme.shadows[1],
-  padding: '8px 12px',
 }));
 
 type MainHeaderProps = {
@@ -44,7 +43,7 @@ const MainHeader = (props: MainHeaderProps) => {
       }}
     >
       <Container maxWidth="md">
-        <StyledToolbar variant="dense" disableGutters>
+        <StyledToolbar variant="dense" disableGutters sx={{ p: { sm: 2, xs: 1 } }}>
           <NotUnderlinedLink href="/">
             <Avatar alt="Marca el Paso" src={`${process.env.PUBLIC_URL}logo512.png`} />
           </NotUnderlinedLink>

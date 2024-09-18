@@ -23,3 +23,8 @@ export type LessonType = {
   what: string,
   who: string,
 };
+
+export type ScheduleDataType = null | {
+  weekday: WeekdayType,
+  lessons: LessonType[]
+}[];
