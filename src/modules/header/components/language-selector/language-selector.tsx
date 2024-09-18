@@ -7,7 +7,7 @@ import {
   Typography,
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import { FlagIcon } from '../flag-icon';
+import { FlagIcon } from 'components/flag-icon';
 
 const LanguageSelector = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);

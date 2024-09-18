@@ -1,8 +1,8 @@
 import React, { forwardRef } from 'react';
 import { Box, Button } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+import { NotUnderlinedLink } from 'components/not-underlined-link';
 import { SiteSettingsPanel, type SiteSettingsPanelProps } from '../site-settings-panel';
-import { NotUnderlinedLink } from '../not-underlined-link';
 
 interface DesktopHeaderProps extends SiteSettingsPanelProps {}
 

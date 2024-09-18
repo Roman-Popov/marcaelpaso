@@ -6,10 +6,10 @@ import {
   Toolbar,
 } from '@mui/material';
 import { PaletteMode, styled, alpha } from '@mui/material/styles';
-import { TabletAndBelow, Desktop } from '../responsive-wrappers';
-import { MobileHeader } from '../mobile-header';
-import { NotUnderlinedLink } from '../not-underlined-link';
-import { DesktopHeader } from '../desktop-header';
+import { NotUnderlinedLink } from 'components/not-underlined-link';
+import { TabletAndBelow, Desktop } from 'components/responsive-wrappers';
+import { MobileHeader } from './components/mobile-header';
+import { DesktopHeader } from './components/desktop-header';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
@@ -24,12 +24,12 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   boxShadow: theme.shadows[1],
 }));
 
-type MainHeaderProps = {
+type HeaderProps = {
   colorMode: PaletteMode,
   toggleColorMode: () => void,
 };
 
-const MainHeader = (props: MainHeaderProps) => {
+const Header = (props: HeaderProps) => {
   const { colorMode, toggleColorMode } = props;
 
   return (
@@ -59,4 +59,4 @@ const MainHeader = (props: MainHeaderProps) => {
   );
 };
 
-export const MemoizedMainHeader = React.memo(MainHeader);
+export const MemoizedHeader = React.memo(Header);

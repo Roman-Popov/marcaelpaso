@@ -11,8 +11,8 @@ import { PaletteMode } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import { useTranslation } from 'react-i18next';
+import { NotUnderlinedLink } from 'components/not-underlined-link';
 import { SiteSettingsPanel } from '../site-settings-panel';
-import { NotUnderlinedLink } from '../not-underlined-link';
 
 type MobileHeaderProps = {
   colorMode: PaletteMode,
