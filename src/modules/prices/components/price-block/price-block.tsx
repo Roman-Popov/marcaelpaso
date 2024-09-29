@@ -22,7 +22,7 @@ const PriceBlock = (props: PriceBlockProps) => {
       <Typography
         color="textDisabled"
         sx={{ textDecoration: 'line-through', width: '100%' }}
-        fontSize="0.9em"
+        fontSize="0.85em"
         fontWeight="bold"
         textAlign="right"
       >
