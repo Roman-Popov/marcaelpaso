@@ -1,5 +1,11 @@
-import * as React from 'react';
-import { SpeedDial as MUISpeedDial, SpeedDialAction, SpeedDialIcon } from '@mui/material';
+import React, { useState } from 'react';
+import {
+  Box,
+  Backdrop,
+  SpeedDial as MUISpeedDial,
+  SpeedDialAction,
+  SpeedDialIcon,
+} from '@mui/material';
 import {
   CloseRounded as CloseIcon,
   ForumRounded as ContactsIcon,
@@ -20,34 +26,45 @@ const actions = [
 ];
 
 const SpeedDial = () => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   const { t } = useTranslation();
+
   return (
-    <MUISpeedDial
-      ariaLabel="contacts"
-      sx={{ position: 'fixed', bottom: 24, right: 24 }}
-      icon={(
-        <SpeedDialIcon
-          icon={<ContactsIcon />}
-          openIcon={<CloseIcon />}
-        />
+    <Box>
+      <Backdrop open={open} />
+      <MUISpeedDial
+        ariaLabel="contacts"
+        onClose={handleClose}
+        onOpen={handleOpen}
+        sx={{ position: 'fixed', bottom: 24, right: 24 }}
+        icon={(
+          <SpeedDialIcon
+            icon={<ContactsIcon />}
+            openIcon={<CloseIcon />}
+          />
       )}
-    >
-      {actions.map(({ code, href, icon }) => (
-        <SpeedDialAction
-          key={code}
-          tooltipTitle={t(`socials.${code}`)}
-          icon={(
-            <SpeedDialIcon
-              icon={(
-                <NotUnderlinedLink href={href} target="_blank" rel="noopener noreferrer">
-                  {icon}
-                </NotUnderlinedLink>
+      >
+        {actions.map(({ code, href, icon }) => (
+          <SpeedDialAction
+            key={code}
+            tooltipTitle={t(`socials.${code}`)}
+            tooltipOpen
+            icon={(
+              <SpeedDialIcon
+                icon={(
+                  <NotUnderlinedLink href={href} target="_blank" rel="noopener noreferrer">
+                    {icon}
+                  </NotUnderlinedLink>
               )}
-            />
+              />
           )}
-        />
-      ))}
-    </MUISpeedDial>
+          />
+        ))}
+      </MUISpeedDial>
+    </Box>
   );
 };
 

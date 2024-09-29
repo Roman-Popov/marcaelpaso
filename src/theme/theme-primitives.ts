@@ -30,16 +30,16 @@ declare module '@mui/material/styles/createPalette' {
 const customTheme = createTheme();
 
 export const brand = {
-  50: 'hsl(210, 100%, 95%)',
-  100: 'hsl(210, 100%, 92%)',
-  200: 'hsl(210, 100%, 80%)',
-  300: 'hsl(210, 100%, 65%)',
-  400: 'hsl(210, 98%, 48%)',
-  500: 'hsl(210, 98%, 42%)',
-  600: 'hsl(210, 98%, 55%)',
-  700: 'hsl(210, 100%, 35%)',
-  800: 'hsl(210, 100%, 16%)',
-  900: 'hsl(210, 100%, 21%)',
+  50: 'hsl(106, 100%, 95%)',
+  100: 'hsl(106, 100%, 92%)',
+  200: 'hsl(106, 100%, 80%)',
+  300: 'hsl(106, 100%, 65%)',
+  400: 'hsl(106, 98%, 48%)',
+  500: 'hsl(106, 98%, 42%)',
+  600: 'hsl(106, 98%, 55%)',
+  700: 'hsl(106, 100%, 35%)',
+  800: 'hsl(106, 100%, 16%)',
+  900: 'hsl(106, 100%, 21%)',
 };
 
 export const gray = {
@@ -99,14 +99,14 @@ export const getDesignTokens = (mode: PaletteMode) => ({
     mode,
     primary: {
       light: brand[200],
-      main: brand[400],
-      dark: brand[700],
+      main: brand[700],
+      dark: brand[800],
       contrastText: brand[50],
       ...(mode === 'dark' && {
         contrastText: brand[50],
         light: brand[300],
-        main: brand[400],
-        dark: brand[700],
+        main: brand[700],
+        dark: brand[800],
       }),
     },
     info: {
@@ -165,7 +165,7 @@ export const getDesignTokens = (mode: PaletteMode) => ({
       primary: gray[800],
       secondary: gray[600],
       warning: orange[400],
-      ...(mode === 'dark' && { primary: 'hsl(0, 0%, 100%)', secondary: gray[400] }),
+      ...(mode === 'dark' && { primary: 'hsl(0, 0%, 100%)', secondary: gray[50] }),
     },
     action: {
       hover: alpha(gray[200], 0.2),

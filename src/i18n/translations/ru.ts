@@ -13,7 +13,7 @@ export const translationsRu = {
     spanish: 'Испанский',
   },
   socials: {
-    email: 'Электронная почта',
+    email: 'Электронная\u00A0почта',
     phone: 'Позвонить',
     telegram: 'Telegram',
     whatsApp: 'WhatsApp',

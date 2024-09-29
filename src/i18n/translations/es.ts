@@ -13,8 +13,8 @@ export const translationsEs = {
     spanish: 'Español',
   },
   socials: {
-    email: 'Correo electrónico',
-    phone: 'Para llamar',
+    email: 'Correo\u00A0electrónico',
+    phone: 'Para\u00A0llamar',
     telegram: 'Telegram',
     whatsApp: 'WhatsApp',
   },
