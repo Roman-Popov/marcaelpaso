@@ -5,8 +5,8 @@ import {
   Stack,
   Typography,
 } from '@mui/material';
+import { PriceBlock } from '../../../components/price-block';
 import type { ComparePriceData } from '../../../prices-types';
-import { PriceBlock } from '../price-block';
 import { StyledPriceBox } from '../styled-price-box';
 
 type PricesColumnProps = {

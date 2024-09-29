@@ -74,7 +74,7 @@ const Schedule = () => {
 
   return (
     <Container maxWidth="md">
-      <Card sx={{ px: { sm: 2, xs: 1 } }}>
+      <Card sx={{ p: { sm: 2, xs: 1 }, pt: { xs: 2 } }}>
         <Desktop>
           <DesktopSchedule scheduleData={scheduleData} />
         </Desktop>

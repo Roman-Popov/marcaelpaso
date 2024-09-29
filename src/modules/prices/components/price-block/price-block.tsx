@@ -1,18 +1,23 @@
 import * as React from 'react';
 import { Stack, Typography } from '@mui/material';
-import type { ComparePriceData } from '../../../prices-types';
+import type { ComparePriceData } from '../../prices-types';
 
 type PriceBlockProps = {
   price: ComparePriceData,
+  direction?: 'row' | 'column',
 };
 
 const PriceBlock = (props: PriceBlockProps) => {
-  const { price } = props;
+  const { price, direction = 'column' } = props;
   const { basePrice, current } = price;
   const isBasePrice = basePrice === current;
 
   return (
-    <Stack sx={{ justifyContent: 'end', alignItems: 'center', width: '100%' }}>
+    <Stack
+      direction={direction}
+      spacing={direction === 'row' ? 1 : 0}
+      sx={{ justifyContent: 'end', alignItems: 'center', width: '100%' }}
+    >
       {!isBasePrice && (
       <Typography
         color="textDisabled"

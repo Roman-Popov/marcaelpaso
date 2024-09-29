@@ -1,1 +1,6 @@
-export { Desktop, TabletAndBelow } from './responsive-wrappers';
+export {
+  Desktop,
+  Tablet,
+  Mobile,
+  TabletAndBelow
+} from './responsive-wrappers';
