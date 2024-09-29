@@ -191,7 +191,7 @@ export const dataDisplayCustomizations: Components<Theme> = {
                 fontSize: theme.typography.caption.fontSize,
               },
             },
-          }
+          },
         ],
       }),
     },
@@ -224,7 +224,7 @@ export const dataDisplayCustomizations: Components<Theme> = {
             style: {
               fontSize: '1rem',
             },
-          }
+          },
         ],
       },
     },

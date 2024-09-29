@@ -58,6 +58,7 @@ export const navigationCustomizations: Components<Theme> = {
   MuiSelect: {
     defaultProps: {
       IconComponent: React.forwardRef<SVGSVGElement, SvgIconProps>((props, ref) => (
+        // eslint-disable-next-line react/jsx-props-no-spreading
         <UnfoldMoreRoundedIcon fontSize="small" {...props} ref={ref} />
       )),
     },
@@ -260,7 +261,7 @@ export const navigationCustomizations: Components<Theme> = {
               width: 12,
               height: 12,
             },
-          }
+          },
         ],
       }),
     },

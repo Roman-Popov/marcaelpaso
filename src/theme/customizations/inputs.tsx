@@ -215,7 +215,7 @@ export const inputsCustomizations: Components<Theme> = {
                 },
               }),
             },
-          }
+          },
         ],
       }),
     },
@@ -270,7 +270,7 @@ export const inputsCustomizations: Components<Theme> = {
               width: '2.5rem',
               height: '2.5rem',
             },
-          }
+          },
         ],
       }),
     },
@@ -415,7 +415,7 @@ export const inputsCustomizations: Components<Theme> = {
             style: {
               height: '2.5rem',
             },
-          }
+          },
         ],
       }),
       notchedOutline: {
