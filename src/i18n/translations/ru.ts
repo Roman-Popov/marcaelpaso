@@ -28,10 +28,25 @@ export const translationsRu = {
     sunday: 'Воскресенье',
   },
   schedule: {
-    loadError: 'Ошибка загрузки данных\nПожалуйста, попробуйте позднее',
     subject: 'Занятие',
     teacher: 'Преподаватель',
     teachers: 'Преподаватели',
     time: 'Время',
+  },
+  prices: {
+    singleVisit: 'Разовое\u00A0посещение',
+    subscriptions: 'Абонементы',
+    month: '{{count}}\u00A0мес',
+    amount: 'Количество занятий',
+    validity: 'Срок действия',
+    price: 'Цена',
+    trial: 'Пробное\u00A0*',
+    regular: 'Обычное',
+    trialDetailed: '* Ваше первое пробное занятие в студии',
+    personalTitle: 'Персональные занятия',
+    personalText: 'Стоимость, даты и сроки индивидуальных занятий обговариваются с преподавателем',
+  },
+  serverInteraction: {
+    loadError: 'Ошибка загрузки данных\nПожалуйста, попробуйте позднее',
   },
 };

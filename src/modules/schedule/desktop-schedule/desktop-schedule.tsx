@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Grid2 as Grid, Typography } from '@mui/material';
-import { NoDataBlock } from '../components/no-data-block';
+import { NoDataBlock } from 'components/no-data-block';
 import { ScheduleDay } from './components/schedule-day';
 import type { ScheduleDataType } from '../schedule-types';
 

@@ -38,7 +38,7 @@ const NoDataBlock = (props: NoDataBlockProps) => {
               textAlign="center"
               whiteSpace="pre-line"
             >
-              {t('schedule.loadError')}
+              {t('serverInteraction.loadError')}
             </Typography>
           )
           : (

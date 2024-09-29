@@ -28,10 +28,27 @@ export const translationsEs = {
     sunday: 'Domingo',
   },
   schedule: {
-    loadError: 'Error al cargar datos\nPor favor inténtalo de nuevo más tarde',
     subject: 'Asignatura',
     teacher: 'Maestro',
     teachers: 'Maestros',
     time: 'Tiempo',
+  },
+  prices: {
+    singleVisit: 'Visita\u00A0única',
+    subscriptions: 'Suscripciones',
+    month: '{{count}}\u00A0meses',
+    month_one: '{{count}}\u00A0mes',
+    month_other: '{{count}}\u00A0meses',
+    amount: 'Cantidad de clases',
+    validity: 'Periodo de validez',
+    price: 'Precio',
+    trial: 'De prueba\u00A0*',
+    regular: 'Regular',
+    trialDetailed: '* Tu primera lección de prueba en el estudio',
+    personalTitle: 'Lecciones personales',
+    personalText: 'El coste, las fechas y la duración de las clases individuales se negocian con el maestro',
+  },
+  serverInteraction: {
+    loadError: 'Error al cargar datos\nPor favor inténtalo de nuevo más tarde',
   },
 };

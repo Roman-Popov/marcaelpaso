@@ -6,8 +6,8 @@ import {
   Typography,
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+import { NoDataBlock } from 'components/no-data-block';
 import type { ScheduleDataType } from '../schedule-types';
-import { NoDataBlock } from '../components/no-data-block';
 
 type MobileScheduleProps = {
   scheduleData: ScheduleDataType,
