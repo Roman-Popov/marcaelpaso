@@ -50,7 +50,7 @@ const SpeedDial = () => {
           icon={(
             <SpeedDialContent
               icon={<ContactsIcon />}
-              text="Записаться"
+              text={t('socials.contactUs')}
               bold
             />
         )}

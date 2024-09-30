@@ -13,6 +13,7 @@ export const translationsEn = {
     spanish: 'Spanish',
   },
   socials: {
+    contactUs: 'Contact us',
     email: 'Email',
     phone: 'Call',
     telegram: 'Telegram',
