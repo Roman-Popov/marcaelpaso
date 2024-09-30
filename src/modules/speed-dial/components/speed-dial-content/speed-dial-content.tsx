@@ -5,7 +5,7 @@ import {
   SxProps,
   Typography,
 } from '@mui/material';
-import { NotUnderlinedLink } from '../../../not-underlined-link';
+import { NotUnderlinedLink } from 'components/not-underlined-link';
 
 type SpeedDialContentProps = {
   bold?: boolean,

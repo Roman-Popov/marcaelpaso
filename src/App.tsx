@@ -11,9 +11,9 @@ import {
 import { Header } from 'modules/header';
 import { Prices } from 'modules/prices';
 import { Schedule } from 'modules/schedule';
+import { SpeedDial } from 'modules/speed-dial';
 import { getTheme } from './theme';
 import './App.css';
-import { SpeedDial } from './components/speed-dial';
 
 const App = () => {
   const [colorMode, setColorMode] = useState<PaletteMode>(
