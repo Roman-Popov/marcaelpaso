@@ -30,16 +30,16 @@ declare module '@mui/material/styles/createPalette' {
 const customTheme = createTheme();
 
 export const brand = {
-  50: 'hsl(106, 100%, 95%)',
-  100: 'hsl(106, 100%, 92%)',
-  200: 'hsl(106, 100%, 80%)',
-  300: 'hsl(106, 100%, 65%)',
-  400: 'hsl(106, 98%, 48%)',
-  500: 'hsl(106, 98%, 42%)',
-  600: 'hsl(106, 98%, 55%)',
-  700: 'hsl(106, 100%, 35%)',
-  800: 'hsl(106, 100%, 16%)',
-  900: 'hsl(106, 100%, 21%)',
+  50: 'hsl(124, 78%, 95%)',
+  100: 'hsl(124, 78%, 92%)',
+  200: 'hsl(124, 78%, 80%)',
+  300: 'hsl(124, 78%, 65%)',
+  400: 'hsl(124, 78%, 48%)',
+  500: 'hsl(124, 78%, 42%)',
+  600: 'hsl(124, 78%, 35%)',
+  700: 'hsl(124, 78%, 30%)',
+  800: 'hsl(124, 78%, 25%)',
+  900: 'hsl(124, 78%, 15%)',
 };
 
 export const gray = {
@@ -99,14 +99,12 @@ export const getDesignTokens = (mode: PaletteMode) => ({
     mode,
     primary: {
       light: brand[200],
-      main: brand[700],
+      main: brand[600],
       dark: brand[800],
       contrastText: brand[50],
       ...(mode === 'dark' && {
         contrastText: brand[50],
         light: brand[300],
-        main: brand[700],
-        dark: brand[800],
       }),
     },
     info: {
