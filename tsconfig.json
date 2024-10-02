@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es2017",
     "lib": [
       "dom",
-      "es6",
+      "es2017",
       "dom.iterable",
       "esnext"
     ],
@@ -20,7 +20,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "typeRoots": ["./node_modules/@types", "./node_modules/@yandex/ymaps3-types"],
+    "paths": {
+      "ymaps3": ["../node_modules/@yandex/ymaps3-types"]
+    }
   },
   "include": [
     "src"
