@@ -52,6 +52,9 @@ export const translationsRu = {
     personalTitle: 'Персональные занятия',
     personalText: 'Стоимость, даты и сроки индивидуальных занятий обговариваются с преподавателем',
   },
+  location: {
+    toStudio: 'В студию',
+  },
   serverInteraction: {
     loadError: 'Ошибка загрузки данных\nПожалуйста, попробуйте позднее',
   },

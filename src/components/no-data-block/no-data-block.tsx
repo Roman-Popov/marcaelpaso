@@ -9,26 +9,38 @@ import { alpha } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
 
 type NoDataBlockProps = {
-  type: 'loading' | 'error'
+  type: 'loading' | 'error',
+  fullHeight?: boolean,
+  withoutBorder?: boolean,
 };
 
 const NoDataBlock = (props: NoDataBlockProps) => {
-  const { type } = props;
+  const { type, fullHeight = false, withoutBorder = false } = props;
 
   const { t } = useTranslation();
 
   return (
-    <Grid container size={4} columns={4} spacing={2}>
+    <Grid
+      container
+      size={4}
+      columns={4}
+      spacing={2}
+      sx={{ ...(fullHeight ? { height: '100%' } : {}) }}
+    >
       <Grid
         size={4}
         component={Card}
-        sx={{ p: 0 }}
+        sx={{
+          p: 0,
+          ...(withoutBorder ? { border: 'none' } : {}),
+          ...(fullHeight ? { height: '100%' } : {}),
+        }}
         variant="outlined"
       >
         {type === 'error'
           ? (
             <Typography
-              height={100}
+              height={fullHeight ? '100%' : 100}
               display="flex"
               alignItems="center"
               justifyContent="center"
@@ -47,7 +59,7 @@ const NoDataBlock = (props: NoDataBlockProps) => {
               animation="wave"
               sx={[
                 {
-                  height: 100,
+                  height: fullHeight ? '100%' : 100,
                   transform: 'none',
                   borderRadius: 1,
                 },

@@ -1,4 +1,9 @@
-import React, { useMemo, useState, useEffect } from 'react';
+import React, {
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import { useTranslation } from 'react-i18next';
 import type { Reactify, ReactifiedModule } from '@yandex/ymaps3-types/reactify';
 import ReactDOM from 'react-dom';
@@ -13,8 +18,8 @@ type RawDataType = {
 };
 
 type WithMapProps = {
-  mapData: MapDataType,
-  controlData: ControlDataType,
+  mapData: null | undefined | MapDataType,
+  controlData: null | undefined | ControlDataType,
 };
 
 const SCRIPT_ID = 'ymaps';
@@ -28,8 +33,8 @@ window.ymapsLocalized = {
   [MAP_LOCALES.ru]: undefined,
 };
 
-export function withMap<T extends WithMapProps = WithMapProps>(
-  WrappedComponent: React.ComponentType<T>
+export function withMap<T>(
+  WrappedComponent: React.ComponentType<T & WithMapProps>
 ) {
   const displayName = WrappedComponent.displayName || WrappedComponent.name || 'Component';
 
@@ -44,13 +49,15 @@ export function withMap<T extends WithMapProps = WithMapProps>(
 
     const prevMapLocale = usePrevious(mapLocale);
 
+    const isMapsScriptAdded = useRef(false);
+
     useEffect(() => {
       if (prevMapLocale !== undefined && mapLocale !== prevMapLocale) {
         setData(undefined);
         setControlData(undefined);
 
         setTimeout(() => {
-          window.isMapsScriptAdded = false;
+          isMapsScriptAdded.current = false;
           setForceUpdateCounter((prev) => prev + 1);
         }, 0);
       }
@@ -81,7 +88,8 @@ export function withMap<T extends WithMapProps = WithMapProps>(
     }, [data]);
 
     useEffect(() => {
-      if (!window.isMapsScriptAdded) { // NOTE [RP] 2024-10-02: react dev double rendering
+      if (!isMapsScriptAdded.current) { // NOTE [RP] 2024-10-02: react dev double rendering
+        isMapsScriptAdded.current = true;
         const oldScript = document.getElementById(SCRIPT_ID);
         if (oldScript) {
           oldScript.remove();
@@ -110,7 +118,8 @@ export function withMap<T extends WithMapProps = WithMapProps>(
           script.onerror = () => {
             setData(null);
           };
-          window.isMapsScriptAdded = true;
+
+          isMapsScriptAdded.current = true;
         } else {
           window.ymaps3 = window.ymapsLocalized[mapLocale].ymaps;
           setData(window.ymapsLocalized[mapLocale]);

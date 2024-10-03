@@ -52,6 +52,9 @@ export const translationsEs = {
     personalTitle: 'Lecciones personales',
     personalText: 'El coste, las fechas y la duración de las clases individuales se negocian con el maestro',
   },
+  location: {
+    toStudio: 'Al estudio',
+  },
   serverInteraction: {
     loadError: 'Error al cargar datos\nPor favor inténtalo de nuevo más tarde',
   },

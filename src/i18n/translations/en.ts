@@ -52,6 +52,9 @@ export const translationsEn = {
     personalTitle: 'Personal lessons',
     personalText: 'The cost, dates and duration of individual lessons are discussed with the teacher',
   },
+  location: {
+    toStudio: 'To the studio',
+  },
   serverInteraction: {
     loadError: 'Loading data error\nPlease try again later',
   },
