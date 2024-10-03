@@ -54,6 +54,12 @@ export const translationsRu = {
   },
   location: {
     toStudio: 'В студию',
+    address: 'Адрес:',
+    addressGlobal: '450075, Уфа, Октябрьский район,',
+    addressLocal: 'ул.\u00A0Рихарда\u00A0Зорге, 75, -1\u00A0этаж',
+    details1st: 'Здание «Zorge\u00A0Fitness», вход с обратной стороны здания.',
+    details2nd: 'Ориентир\u00A0—\u00A0вывеска «ООО\u00A0Содержание»',
+    videoDetails: 'Подробнее\u00A0—\u00A0на\u00A0видео',
   },
   serverInteraction: {
     loadError: 'Ошибка загрузки данных\nПожалуйста, попробуйте позднее',

@@ -54,6 +54,12 @@ export const translationsEn = {
   },
   location: {
     toStudio: 'To the studio',
+    address: 'Address:',
+    addressGlobal: '450075, Ufa, Republic of Bashkortostan,',
+    addressLocal: 'Rikharda\u00A0Zorge Street, 75, -1st\u00A0floor',
+    details1st: 'Zorge\u00A0Fitness, entrance from the back side of the building.',
+    details2nd: 'Landmark\u00A0—\u00A0the sign\u00A0«ООО\u00A0Содержание»',
+    videoDetails: 'More details\u00A0—\u00A0on the\u00A0video',
   },
   serverInteraction: {
     loadError: 'Loading data error\nPlease try again later',

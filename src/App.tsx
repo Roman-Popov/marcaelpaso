@@ -12,6 +12,7 @@ import { Header } from 'modules/header';
 import { Prices } from 'modules/prices';
 import { Schedule } from 'modules/schedule';
 import { SpeedDial } from 'modules/speed-dial';
+import { Location } from 'modules/location';
 import { getTheme } from './theme';
 import './App.css';
 
@@ -85,6 +86,19 @@ const App = () => {
             </Typography>
           </Container>
           <Prices />
+        </Box>
+        <Box>
+          <Container maxWidth="md">
+            <Typography
+              id="pricing"
+              variant="h2"
+              textAlign="center"
+              sx={{ mb: 2, scrollMarginTop: { xs: '100px', sm: '120px' } }}
+            >
+              {t('header.location')}
+            </Typography>
+          </Container>
+          <Location />
         </Box>
       </Stack>
     </ThemeProvider>

@@ -52,7 +52,7 @@ const Prices = () => {
 
   return (
     <Container maxWidth="md">
-      <Card sx={{ px: 1 }}>
+      <Card sx={{ px: 1, pb: { xs: 1, sm: 2 } }}>
         <Desktop>
           <DesktopPrices pricesData={pricesData} />
         </Desktop>
