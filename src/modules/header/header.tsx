@@ -45,7 +45,7 @@ const Header = (props: HeaderProps) => {
       <Container maxWidth="md">
         <StyledToolbar variant="dense" disableGutters sx={{ p: { sm: 2, xs: 1 } }}>
           <NotUnderlinedLink href="/">
-            <Avatar alt="Marca el Paso" src={`${process.env.PUBLIC_URL}logo512.png`} />
+            <Avatar alt="Marca el Paso" src={`${process.env.PUBLIC_URL}logo192.png`} />
           </NotUnderlinedLink>
           <Desktop>
             <DesktopHeader colorMode={colorMode} toggleColorMode={toggleColorMode} />

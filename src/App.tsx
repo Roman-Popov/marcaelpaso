@@ -90,7 +90,7 @@ const App = () => {
         <Box>
           <Container maxWidth="md">
             <Typography
-              id="pricing"
+              id="location"
               variant="h2"
               textAlign="center"
               sx={{ mb: 2, scrollMarginTop: { xs: '100px', sm: '120px' } }}

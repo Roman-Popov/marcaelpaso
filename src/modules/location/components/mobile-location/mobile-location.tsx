@@ -27,7 +27,7 @@ const MobileLocation = () => {
           controls
           preload="none"
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-          poster="path.png"
+          poster="path.webp"
         >
           <source src="welcome.mp4" type="video/mp4" />
         </video>

@@ -72,10 +72,10 @@ const MobileHeader = (props: MobileHeaderProps) => {
             <MenuItem href="#pricing" {...menuItemCommonProps}>
               {t('header.pricing')}
             </MenuItem>
-            {/* <MenuItem href="#location" {...menuItemCommonProps}>
+            <MenuItem href="#location" {...menuItemCommonProps}>
               {t('header.location')}
             </MenuItem>
-            <MenuItem href="#gallery" {...menuItemCommonProps}>
+            {/* <MenuItem href="#gallery" {...menuItemCommonProps}>
               {t('header.gallery')}
             </MenuItem>
             <MenuItem href="#contacts" {...menuItemCommonProps}>

@@ -36,10 +36,10 @@ const DesktopHeader = (props: DesktopHeaderProps) => {
         <NotUnderlinedLink href="#pricing" component={LinkButton}>
           {t('header.pricing')}
         </NotUnderlinedLink>
-        {/* <NotUnderlinedLink href="#location" component={LinkButton}>
+        <NotUnderlinedLink href="#location" component={LinkButton}>
           {t('header.location')}
         </NotUnderlinedLink>
-        <NotUnderlinedLink href="#gallery" component={LinkButton}>
+        {/* <NotUnderlinedLink href="#gallery" component={LinkButton}>
           {t('header.gallery')}
         </NotUnderlinedLink>
         <NotUnderlinedLink href="#contacts" component={LinkButton}>
