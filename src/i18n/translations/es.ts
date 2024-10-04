@@ -53,7 +53,7 @@ export const translationsEs = {
     personalText: 'El coste, las fechas y la duración de las clases individuales se negocian con el maestro',
   },
   location: {
-    toStudio: 'Al estudio',
+    resetMap: 'Restablecer mapa',
     address: 'Dirección:',
     addressGlobal: '450075, Ufa, República de Bashkortostán,',
     addressLocal: 'Calle Rikharda\u00A0Zorge,\u00A075, -1\u00A0piso',
@@ -63,6 +63,7 @@ export const translationsEs = {
     addressToCopy: 'Ufa, Calle Rikharda Zorge, 75',
     copied: 'Copiado',
     copyError: 'Error de copia',
+    getDirections: 'Obtener direcciones',
   },
   serverInteraction: {
     loadError: 'Error al cargar datos\nPor favor inténtalo de nuevo más tarde',

@@ -53,7 +53,7 @@ export const translationsRu = {
     personalText: 'Стоимость, даты и сроки индивидуальных занятий обговариваются с преподавателем',
   },
   location: {
-    toStudio: 'В студию',
+    resetMap: 'Сбросить карту',
     address: 'Адрес:',
     addressGlobal: '450075, Уфа, Октябрьский район,',
     addressLocal: 'ул.\u00A0Рихарда\u00A0Зорге, 75, -1\u00A0этаж',
@@ -63,6 +63,7 @@ export const translationsRu = {
     addressToCopy: 'Уфа, ул. Рихарда Зорге, 75',
     copied: 'Скопировано',
     copyError: 'Ошибка копирования',
+    getDirections: 'Проложить маршрут',
   },
   serverInteraction: {
     loadError: 'Ошибка загрузки данных\nПожалуйста, попробуйте позднее',

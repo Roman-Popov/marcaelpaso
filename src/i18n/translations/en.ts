@@ -53,7 +53,7 @@ export const translationsEn = {
     personalText: 'The cost, dates and duration of individual lessons are discussed with the teacher',
   },
   location: {
-    toStudio: 'To the studio',
+    resetMap: 'Reset map',
     address: 'Address:',
     addressGlobal: '450075, Ufa, Republic of Bashkortostan,',
     addressLocal: 'Rikharda\u00A0Zorge Street, 75, -1st\u00A0floor',
@@ -63,6 +63,7 @@ export const translationsEn = {
     addressToCopy: 'Ufa, Rikharda Zorge Street, 75',
     copied: 'Copied',
     copyError: 'Unable to copy',
+    getDirections: 'Get directions',
   },
   serverInteraction: {
     loadError: 'Loading data error\nPlease try again later',

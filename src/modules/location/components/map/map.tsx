@@ -1,21 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
-import type { YMapLocationRequest, LngLat, MapEventUpdateHandler } from 'ymaps3';
+import type { YMapLocationRequest, MapEventUpdateHandler } from 'ymaps3';
 import { Box, useTheme } from '@mui/material';
 import { Place } from '@mui/icons-material';
 import { NoDataBlock } from 'components/no-data-block';
+import { BOUNDS, COORDINATES, LOCATION } from '../../location-constants';
 import { withMap } from '../with-map';
 import { MapControls } from '../map-controls';
-
-const COORDINATES: LngLat = [56.01667894067478, 54.77387244763266];
-const BOUNDS: [LngLat, LngLat] = [
-  [53.6975749488958, 53.291418544789074],
-  [59.064396000992794, 56.081166519355214],
-];
-
-const LOCATION: YMapLocationRequest = {
-  center: COORDINATES,
-  zoom: 16,
-};
 
 type LocationProps = {
   containerRef: React.MutableRefObject<HTMLDivElement | null>,
