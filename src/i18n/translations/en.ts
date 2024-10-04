@@ -60,6 +60,9 @@ export const translationsEn = {
     details1st: 'Zorge\u00A0Fitness, entrance from the back side of the building.',
     details2nd: 'Landmark\u00A0—\u00A0the sign\u00A0«ООО\u00A0Содержание»',
     videoDetails: 'More details\u00A0—\u00A0on the\u00A0video',
+    addressToCopy: 'Ufa, Rikharda Zorge Street, 75',
+    copied: 'Copied',
+    copyError: 'Unable to copy',
   },
   serverInteraction: {
     loadError: 'Loading data error\nPlease try again later',

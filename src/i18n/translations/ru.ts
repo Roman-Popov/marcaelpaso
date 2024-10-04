@@ -60,6 +60,9 @@ export const translationsRu = {
     details1st: 'Здание «Zorge\u00A0Fitness», вход с обратной стороны здания.',
     details2nd: 'Ориентир\u00A0—\u00A0вывеска «ООО\u00A0Содержание»',
     videoDetails: 'Подробнее\u00A0—\u00A0на\u00A0видео',
+    addressToCopy: 'Уфа, ул. Рихарда Зорге, 75',
+    copied: 'Скопировано',
+    copyError: 'Ошибка копирования',
   },
   serverInteraction: {
     loadError: 'Ошибка загрузки данных\nПожалуйста, попробуйте позднее',
