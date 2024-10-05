@@ -23,8 +23,8 @@ export const translationsEn = {
   about: {
     p1st: 'Dancing is not just body movements to music. It is not easy to start dancing, but dancing gives the opportunity to feel freedom, passion, inspiration.',
     p2nd: 'At\u2004Marca\u2004El\u2004Paso we will help you live this experience so that you can overcome your fears, inhibitions and blocks. And feel more flexible, free and happy.',
-    p3rd: 'At\u2004Marca\u2004El\u2004Paso it is important to dance with your soul and heart. Marca\u00A0el\u00A0Paso\u00A0is\u00A0an\u00A0atmosphere to share with family and to learn new cultures.',
-    p4th: 'Come and learn with us!',
+    p3rd: 'At\u2004Marca\u2004El\u2004Paso it is important to dance with your soul and heart. Marca\u00A0el\u00A0Paso\u00A0is an\u00A0atmosphere to share with family and to learn new cultures.',
+    p4th: 'Come\u00A0and\u00A0learn with\u00A0us!',
   },
   weekdays: {
     monday: 'Monday',

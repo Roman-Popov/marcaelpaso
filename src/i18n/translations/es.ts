@@ -24,7 +24,7 @@ export const translationsEs = {
     p1st: 'Bailar no es sólo mover el cuerpo al ritmo de la música. No es fácil empezar a bailar, pero bailar da la oportunidad de sentir libertad, pasión, inspiración.',
     p2nd: 'En\u2004Marca\u2004El\u2004Paso te ayudamos a vivir esta experiencia para que puedas superar tus miedos, inhibiciones y bloqueos. Y te sientas más flexible, libre y feliz',
     p3rd: 'En\u2004Marca\u2004El\u2004Paso es importante bailar con el alma y el corazón. Marca\u2004El\u2004Paso\u00A0es\u00A0un\u00A0ambiente para compartir en familia y conocer nuevas culturas.',
-    p4th: '¡Ven y aprende con nosotros!',
+    p4th: '¡Ven\u00A0y\u00A0aprende con\u00A0nosotros!',
   },
   weekdays: {
     monday: 'Lunes',
