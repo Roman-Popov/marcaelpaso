@@ -7,6 +7,7 @@ export const translationsEs = {
     location: 'Ubicación',
     pricing: 'Precios',
     schedule: 'Cronograma',
+    name: 'Estudio de baile',
   },
   languages: {
     english: 'Inglés',

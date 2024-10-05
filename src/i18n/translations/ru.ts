@@ -7,6 +7,7 @@ export const translationsRu = {
     location: 'Как добраться',
     pricing: 'Цены',
     schedule: 'Расписание',
+    name: 'Студия танцев',
   },
   languages: {
     english: 'Английский',

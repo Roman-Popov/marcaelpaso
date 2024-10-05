@@ -176,6 +176,12 @@ export const getDesignTokens = (mode: PaletteMode) => ({
   },
   typography: {
     fontFamily: ['"Inter", "sans-serif"'].join(','),
+    mainGreen: {
+      textShadow: '0 0 15px #12ff00',
+      fontFamily: ['"Caveat", "sans-serif"'].join(','),
+      // fontSize: customTheme.typography.pxToRem(72),
+      fontWeight: 900,
+    },
     h1: {
       fontSize: customTheme.typography.pxToRem(48),
       fontWeight: 600,

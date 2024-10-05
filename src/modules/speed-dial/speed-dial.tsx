@@ -34,7 +34,7 @@ const SpeedDial = () => {
 
   return (
     <Box>
-      <Backdrop open={open} />
+      <Backdrop open={open} sx={{ zIndex: 1000 }} />
       <Slide in direction="up" timeout={{ enter: 1000 }}>
         <MUISpeedDial
           ariaLabel="contacts"

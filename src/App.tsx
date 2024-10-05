@@ -2,9 +2,11 @@ import React, { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { PaletteMode, ThemeProvider, createTheme } from '@mui/material/styles';
 import {
+  alpha,
   Box,
   Container,
   CssBaseline,
+  Divider,
   Stack,
   Typography,
 } from '@mui/material';
@@ -60,13 +62,52 @@ const App = () => {
         }}
       />
       <Header colorMode={colorMode} toggleColorMode={toggleColorMode} />
-      <SpeedDial />
-      <Stack spacing={10} sx={{ my: 20 }}>
+      <Stack spacing={10} sx={{ my: 15 }}>
+        <Box>
+          <Container maxWidth="md">
+            <Box
+              sx={{
+                width: 'fit-content',
+                mx: 'auto',
+              }}
+            >
+              <Stack>
+                <Typography
+                // @ts-ignore
+                  variant="mainGreen"
+                  component="p"
+                  sx={{
+                    px: { xs: '0.75em', sm: '1em' },
+                    textAlign: 'center',
+                    fontSize: { xs: '4em', sm: '5em' },
+                  }}
+                >
+                  {'Marca El\u00A0Paso'}
+                </Typography>
+                <Divider
+                  sx={{
+                    borderColor: 'transparent',
+                    boxShadow: '0 -2px 5px 1px #12ff00',
+                    mx: { xs: '1.5em', sm: '2.5em' },
+                  }}
+                />
+              </Stack>
+              <Divider sx={{ borderColor: alpha(theme.palette.grey[100], 0.8), mt: '-1px' }} />
+            </Box>
+            <Typography
+              variant="h2"
+              textAlign="center"
+              sx={{ py: { xs: 1, sm: 1.5 }, fontSize: { xs: '2.25em', sm: '2.75em' } }}
+            >
+              {t('header.name')}
+            </Typography>
+          </Container>
+        </Box>
         <Box>
           <Container maxWidth="md">
             <Typography
               id="about"
-              variant="h2"
+              variant="h3"
               textAlign="center"
               sx={{ mb: 2, scrollMarginTop: { xs: '100px', sm: '120px' } }}
             >
@@ -79,7 +120,7 @@ const App = () => {
           <Container maxWidth="md">
             <Typography
               id="schedule"
-              variant="h2"
+              variant="h3"
               textAlign="center"
               sx={{ mb: 2, scrollMarginTop: { xs: '100px', sm: '120px' } }}
             >
@@ -92,7 +133,7 @@ const App = () => {
           <Container maxWidth="md">
             <Typography
               id="pricing"
-              variant="h2"
+              variant="h3"
               textAlign="center"
               sx={{ mb: 2, scrollMarginTop: { xs: '100px', sm: '120px' } }}
             >
@@ -105,7 +146,7 @@ const App = () => {
           <Container maxWidth="md">
             <Typography
               id="location"
-              variant="h2"
+              variant="h3"
               textAlign="center"
               sx={{ mb: 2, scrollMarginTop: { xs: '100px', sm: '120px' } }}
             >
@@ -115,6 +156,7 @@ const App = () => {
           <Location />
         </Box>
       </Stack>
+      <SpeedDial />
     </ThemeProvider>
   );
 };

@@ -7,6 +7,7 @@ export const translationsEn = {
     location: 'Location',
     pricing: 'Pricing',
     schedule: 'Schedule',
+    name: 'Dance studio',
   },
   languages: {
     english: 'English',
