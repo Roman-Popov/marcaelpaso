@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 export const translationsEn = {
   header: {
     about: 'About',
@@ -18,6 +19,12 @@ export const translationsEn = {
     phone: 'Call',
     telegram: 'Telegram',
     whatsApp: 'WhatsApp',
+  },
+  about: {
+    p1st: 'Dancing is not just body movements to music. It is not easy to start dancing, but dancing gives the opportunity to feel freedom, passion, inspiration.',
+    p2nd: 'At\u2004Marca\u2004El\u2004Paso we will help you live this experience so that you can overcome your fears, inhibitions and blocks. And feel more flexible, free and happy.',
+    p3rd: 'At\u2004Marca\u2004El\u2004Paso it is important to dance with your soul and heart. Marca\u00A0el\u00A0Paso\u00A0is\u00A0an\u00A0atmosphere to share with family and to learn new cultures.',
+    p4th: 'Come and learn with us!',
   },
   weekdays: {
     monday: 'Monday',

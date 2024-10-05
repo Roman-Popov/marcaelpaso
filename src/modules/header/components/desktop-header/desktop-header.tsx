@@ -27,9 +27,9 @@ const DesktopHeader = (props: DesktopHeaderProps) => {
     }}
     >
       <Box>
-        {/* <NotUnderlinedLink href="#about" component={LinkButton}>
+        <NotUnderlinedLink href="#about" component={LinkButton}>
           {t('header.about')}
-        </NotUnderlinedLink> */}
+        </NotUnderlinedLink>
         <NotUnderlinedLink href="#schedule" component={LinkButton}>
           {t('header.schedule')}
         </NotUnderlinedLink>

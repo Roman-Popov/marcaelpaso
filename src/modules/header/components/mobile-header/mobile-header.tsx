@@ -63,9 +63,9 @@ const MobileHeader = (props: MobileHeaderProps) => {
           </Box>
           <Divider sx={{ my: 3 }} />
           <Box>
-            {/* <MenuItem href="#about" {...menuItemCommonProps}>
+            <MenuItem href="#about" {...menuItemCommonProps}>
               {t('header.about')}
-            </MenuItem> */}
+            </MenuItem>
             <MenuItem href="#schedule" {...menuItemCommonProps}>
               {t('header.schedule')}
             </MenuItem>

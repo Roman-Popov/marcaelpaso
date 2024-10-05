@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import { Header } from 'modules/header';
 import { Prices } from 'modules/prices';
+import { About } from 'modules/about';
 import { Schedule } from 'modules/schedule';
 import { SpeedDial } from 'modules/speed-dial';
 import { Location } from 'modules/location';
@@ -61,6 +62,19 @@ const App = () => {
       <Header colorMode={colorMode} toggleColorMode={toggleColorMode} />
       <SpeedDial />
       <Stack spacing={10} sx={{ my: 20 }}>
+        <Box>
+          <Container maxWidth="md">
+            <Typography
+              id="about"
+              variant="h2"
+              textAlign="center"
+              sx={{ mb: 2, scrollMarginTop: { xs: '100px', sm: '120px' } }}
+            >
+              {t('header.about')}
+            </Typography>
+          </Container>
+          <About />
+        </Box>
         <Box>
           <Container maxWidth="md">
             <Typography
