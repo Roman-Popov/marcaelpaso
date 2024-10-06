@@ -35,14 +35,20 @@ const StudioName = () => {
               {'Marca El\u00A0Paso'}
             </Typography>
             <Divider
-              sx={{
+              sx={(theme) => ({
                 borderColor: 'transparent',
-                boxShadow: '0 -2px 5px 1px #12ff00',
                 mx: { xs: '1.5em', sm: '2.5em' },
-              }}
+                ...theme.applyStyles('dark', {
+                  boxShadow: '0 -2px 5px 1px #12ff00',
+                }),
+              })}
             />
           </Stack>
-          <Divider sx={(theme) => ({ borderColor: alpha(theme.palette.grey[100], 0.8), mt: '-1px' })} />
+          <Divider sx={(theme) => ({
+            borderColor: alpha(theme.palette.grey[theme.palette.mode === 'dark' ? 100 : 900], 0.8),
+            mt: '-1px',
+          })}
+          />
         </Box>
         <Typography
           variant="h2"
