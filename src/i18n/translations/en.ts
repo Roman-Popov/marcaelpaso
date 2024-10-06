@@ -73,6 +73,11 @@ export const translationsEn = {
     copyError: 'Unable to copy',
     getDirections: 'Get directions',
   },
+  footer: {
+    madeWithLove: 'Made with',
+    devName: 'Roman\u00A0Popov',
+    notAnOffer: 'The information posted on the site is not a public offer',
+  },
   serverInteraction: {
     loadError: 'Loading data error\nPlease try again later',
   },

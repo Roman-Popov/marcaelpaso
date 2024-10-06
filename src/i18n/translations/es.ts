@@ -73,6 +73,11 @@ export const translationsEs = {
     copyError: 'Error de copia',
     getDirections: 'Obtener direcciones',
   },
+  footer: {
+    madeWithLove: 'Hecho con',
+    devName: 'Roman\u00A0Popov',
+    notAnOffer: 'La información publicada en el sitio no constituye una oferta pública',
+  },
   serverInteraction: {
     loadError: 'Error al cargar datos\nPor favor inténtalo de nuevo más tarde',
   },

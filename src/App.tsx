@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { PaletteMode, ThemeProvider, createTheme } from '@mui/material/styles';
-import { CssBaseline, Stack } from '@mui/material';
+import { Box, CssBaseline, Stack } from '@mui/material';
 import {
   Header,
   Prices,
@@ -11,6 +11,7 @@ import {
   Location,
 } from 'modules';
 import { BackgroundImage, SectionWrapper, StudioName } from 'components';
+import { Footer } from 'modules/footer';
 import { getTheme } from './theme';
 import './App.css';
 
@@ -38,22 +39,25 @@ const App = () => {
       <CssBaseline />
       <BackgroundImage />
       <Header colorMode={colorMode} toggleColorMode={toggleColorMode} />
-      <Stack spacing={10} sx={{ my: 15 }}>
-        <StudioName />
-        <SectionWrapper id="about" header={t('header.about')}>
-          <About />
-        </SectionWrapper>
-        <SectionWrapper id="schedule" header={t('header.schedule')}>
-          <Schedule />
-        </SectionWrapper>
-        <SectionWrapper id="pricing" header={t('header.pricing')}>
-          <Prices />
-        </SectionWrapper>
-        <SectionWrapper id="location" header={t('header.location')}>
-          <Location />
-        </SectionWrapper>
-      </Stack>
-      <SpeedDial />
+      <Box sx={{ position: 'relative', pb: 2 }}>
+        <Stack spacing={10} sx={{ my: 15 }}>
+          <StudioName />
+          <SectionWrapper id="about" header={t('header.about')}>
+            <About />
+          </SectionWrapper>
+          <SectionWrapper id="schedule" header={t('header.schedule')}>
+            <Schedule />
+          </SectionWrapper>
+          <SectionWrapper id="pricing" header={t('header.pricing')}>
+            <Prices />
+          </SectionWrapper>
+          <SectionWrapper id="location" header={t('header.location')}>
+            <Location />
+          </SectionWrapper>
+        </Stack>
+        <SpeedDial />
+      </Box>
+      <Footer />
     </ThemeProvider>
   );
 };

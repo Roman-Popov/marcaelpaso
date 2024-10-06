@@ -73,6 +73,11 @@ export const translationsRu = {
     copyError: 'Ошибка копирования',
     getDirections: 'Проложить маршрут',
   },
+  footer: {
+    madeWithLove: 'Сделал с',
+    devName: 'Роман\u00A0Попов',
+    notAnOffer: 'Информация, размещенная на сайте не является публичной офертой',
+  },
   serverInteraction: {
     loadError: 'Ошибка загрузки данных\nПожалуйста, попробуйте позднее',
   },

@@ -33,57 +33,65 @@ const SpeedDial = () => {
   const { t } = useTranslation();
 
   return (
-    <Box>
+    <>
       <Backdrop open={open} sx={{ zIndex: 1000 }} />
-      <Slide in direction="up" timeout={{ enter: 1000 }}>
-        <MUISpeedDial
-          ariaLabel="contacts"
-          onClose={handleClose}
-          onOpen={handleOpen}
-          sx={{
-            alignItems: 'end',
-            position: 'fixed',
-            bottom: 24,
-            right: { xs: 18, sm: 24 },
-          }}
-          FabProps={{ variant: 'extended' }}
-          icon={(
-            <SpeedDialContent
-              icon={<ContactsIcon />}
-              text={t('socials.contactUs')}
-              bold
-            />
-        )}
-          transitionDuration={{ enter: 1000 }}
-        >
-          {actions.map(({ code, href, icon }) => (
-            <SpeedDialAction
-              key={code}
-              FabProps={{
-                variant: 'extended',
-                sx: {
-                  px: 2,
-                  width: 'fit-content',
-                  alignSelf: 'end',
-                  textTransform: 'none',
-                },
-              }}
-              icon={(
-                <SpeedDialIcon
-                  icon={(
-                    <SpeedDialContent
-                      href={href}
-                      icon={icon}
-                      text={t(`socials.${code}`)}
-                    />
+      <Box
+        sx={{
+          zIndex: 1001,
+          position: 'sticky',
+          bottom: 24,
+        }}
+      >
+        <Slide in direction="up" timeout={{ enter: 1000 }}>
+          <MUISpeedDial
+            ariaLabel="contacts"
+            onClose={handleClose}
+            onOpen={handleOpen}
+            sx={{
+              position: { xs: 'absolute', xl: 'fixed' },
+              right: { xs: 18, sm: 24 },
+              bottom: { xs: 0, xl: 24 },
+              alignItems: 'end',
+            }}
+            FabProps={{ variant: 'extended' }}
+            icon={(
+              <SpeedDialContent
+                icon={<ContactsIcon />}
+                text={t('socials.contactUs')}
+                bold
+              />
+            )}
+            transitionDuration={{ enter: 1000 }}
+          >
+            {actions.map(({ code, href, icon }) => (
+              <SpeedDialAction
+                key={code}
+                FabProps={{
+                  variant: 'extended',
+                  sx: {
+                    px: 2,
+                    width: 'fit-content',
+                    alignSelf: 'end',
+                    textTransform: 'none',
+                  },
+                }}
+                icon={(
+                  <SpeedDialIcon
+                    icon={(
+                      <SpeedDialContent
+                        href={href}
+                        icon={icon}
+                        text={t(`socials.${code}`)}
+                      />
                   )}
-                />
+                  />
               )}
-            />
-          ))}
-        </MUISpeedDial>
-      </Slide>
-    </Box>
+              />
+            ))}
+          </MUISpeedDial>
+        </Slide>
+      </Box>
+    </>
   );
 };
 
