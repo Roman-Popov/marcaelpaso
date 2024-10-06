@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
-import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import IconButton from '@mui/material/IconButton';
 import Link from '@mui/material/Link';
@@ -87,12 +86,11 @@ const Footer = () => {
             pl: '2em',
           }}
         >
-          {'© '}
-          <Link color="text.secondary" href={DOMAIN}>
+          {`© 2022 – ${new Date().getFullYear()}`}
+          &nbsp;
+          <Link color="text.secondary" href={`https://${DOMAIN}`}>
             {`Marca El Paso, ${t('header.name')}`}
           </Link>
-          &nbsp;
-          {`2022 — ${new Date().getFullYear()}`}
         </Typography>
       </Stack>
     </Container>
