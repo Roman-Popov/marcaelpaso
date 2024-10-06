@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { Box, Stack } from '@mui/material';
+import { Box } from '@mui/material';
 import { AboutText } from '../about-text';
 
 const MobileAbout = () => (
-  <Stack spacing={2}>
+  <>
     <Box sx={{ display: 'flex', justifyContent: 'center' }}>
       <Box sx={{ width: { xs: '75%', sm: '50%' } }}>
         <img
@@ -14,7 +14,7 @@ const MobileAbout = () => (
       </Box>
     </Box>
     <AboutText />
-  </Stack>
+  </>
 );
 
 export const MemoizedMobileAbout = React.memo(MobileAbout);

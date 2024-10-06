@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Card, useTheme } from '@mui/material';
+import { Card, Stack, useTheme } from '@mui/material';
 import { Desktop, TabletAndBelow } from 'components/responsive-wrappers';
 import { DesktopAbout } from './components/desktop-about';
 import { MobileAbout } from './components/mobile-about';
@@ -17,12 +17,19 @@ const About = () => {
       border: 'none',
     }}
     >
-      <Desktop>
-        <DesktopAbout />
-      </Desktop>
-      <TabletAndBelow>
-        <MobileAbout />
-      </TabletAndBelow>
+      <Stack spacing={2}>
+        <Desktop>
+          <DesktopAbout />
+        </Desktop>
+        <TabletAndBelow>
+          <MobileAbout />
+        </TabletAndBelow>
+        <img
+          src={`${process.env.PUBLIC_URL}gallery/students.webp`}
+          alt="Students"
+          style={{ width: '100%' }}
+        />
+      </Stack>
     </Card>
   );
 };
