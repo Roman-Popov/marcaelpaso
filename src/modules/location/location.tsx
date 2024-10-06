@@ -1,26 +1,24 @@
 import * as React from 'react';
-import { Card, Container } from '@mui/material';
+import { Card } from '@mui/material';
 import { Desktop, Tablet, Mobile } from 'components/responsive-wrappers';
 import { DesktopLocation } from './components/desktop-location';
 import { TabletLocation } from './components/tablet-location';
 import { MobileLocation } from './components/mobile-location';
 
 const Location = () => (
-  <Container maxWidth="md">
-    <Card sx={{ p: { sm: 2, xs: 1 } }}>
-      <Desktop>
-        <DesktopLocation />
-      </Desktop>
+  <Card sx={{ p: { xs: 1, sm: 2 } }}>
+    <Desktop>
+      <DesktopLocation />
+    </Desktop>
 
-      <Tablet>
-        <TabletLocation />
-      </Tablet>
+    <Tablet>
+      <TabletLocation />
+    </Tablet>
 
-      <Mobile>
-        <MobileLocation />
-      </Mobile>
-    </Card>
-  </Container>
+    <Mobile>
+      <MobileLocation />
+    </Mobile>
+  </Card>
 );
 
 export const MemoizedLocation = React.memo(Location);

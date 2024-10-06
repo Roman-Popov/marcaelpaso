@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Card, Container } from '@mui/material';
+import { Card } from '@mui/material';
 import { configureRequest, type MaybeCancelError } from 'utils/configure-request';
 import { TabletAndBelow, Desktop } from 'components/responsive-wrappers';
 import { formatRawPriceObject } from './utils/format-raw-price-object';
@@ -51,16 +51,14 @@ const Prices = () => {
   }, [rawPricesData, trans]);
 
   return (
-    <Container maxWidth="md">
-      <Card sx={{ px: 1, pb: { xs: 1, sm: 2 } }}>
-        <Desktop>
-          <DesktopPrices pricesData={pricesData} />
-        </Desktop>
-        <TabletAndBelow>
-          <MobilePrices pricesData={pricesData} />
-        </TabletAndBelow>
-      </Card>
-    </Container>
+    <Card sx={{ px: 1, pb: { xs: 1, sm: 2 } }}>
+      <Desktop>
+        <DesktopPrices pricesData={pricesData} />
+      </Desktop>
+      <TabletAndBelow>
+        <MobilePrices pricesData={pricesData} />
+      </TabletAndBelow>
+    </Card>
   );
 };
 

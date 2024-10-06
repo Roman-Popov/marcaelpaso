@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Card, Container } from '@mui/material';
+import { Card } from '@mui/material';
 import { sortBy } from 'lodash';
 import { configureRequest, type MaybeCancelError } from 'utils/configure-request';
 import { TabletAndBelow, Desktop } from 'components/responsive-wrappers';
@@ -73,16 +73,14 @@ const Schedule = () => {
   }, [rawScheduleData, selectedLanguage]);
 
   return (
-    <Container maxWidth="md">
-      <Card sx={{ p: { sm: 2, xs: 1 }, pt: { xs: 2 } }}>
-        <Desktop>
-          <DesktopSchedule scheduleData={scheduleData} />
-        </Desktop>
-        <TabletAndBelow>
-          <MobileSchedule scheduleData={scheduleData} />
-        </TabletAndBelow>
-      </Card>
-    </Container>
+    <Card sx={{ p: { xs: 1, sm: 2 }, pt: { xs: 2 } }}>
+      <Desktop>
+        <DesktopSchedule scheduleData={scheduleData} />
+      </Desktop>
+      <TabletAndBelow>
+        <MobileSchedule scheduleData={scheduleData} />
+      </TabletAndBelow>
+    </Card>
   );
 };
 

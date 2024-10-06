@@ -72,7 +72,7 @@ const AddressText = () => {
               <Link
                 component="button"
                 onClick={onCopyClick}
-                sx={{ font: 'initial', ':before': { bottom: '-2px' } }}
+                sx={{ font: 'initial', marginTop: '-0.2em', ':before': { bottom: '-2px' } }}
               >
                 <CopyAllRounded
                   sx={{
