@@ -46,7 +46,7 @@ const DesktopHeader = (props: DesktopHeaderProps) => {
           {t('header.contacts')}
         </NotUnderlinedLink> */}
       </Box>
-      <SiteSettingsPanel {...{ colorMode, toggleColorMode }} />
+      <SiteSettingsPanel {...{ colorMode, toggleColorMode }} size="small" />
     </Box>
   );
 };

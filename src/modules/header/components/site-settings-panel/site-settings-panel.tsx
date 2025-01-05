@@ -9,26 +9,32 @@ import { LanguageSelector } from '../language-selector';
 
 export type SiteSettingsPanelProps = {
   colorMode: PaletteMode,
-  toggleColorMode: () => void,
   reversed?: boolean,
+  size?: 'small',
+  toggleColorMode: () => void,
 };
 
 const SiteSettingsPanel = (props: SiteSettingsPanelProps) => {
-  const { colorMode, toggleColorMode, reversed = false } = props;
+  const {
+    colorMode,
+    reversed = false,
+    size,
+    toggleColorMode,
+  } = props;
 
   return (
     <Stack direction={reversed ? 'row-reverse' : 'row'} spacing={1}>
-      <LanguageSelector />
+      <LanguageSelector size={size} />
       <IconButton
         onClick={toggleColorMode}
         color="primary"
         aria-label="Theme toggle button"
-        size="small"
+        size={size}
       >
         {colorMode === 'dark' ? (
-          <LightModeRoundedIcon fontSize="small" />
+          <LightModeRoundedIcon fontSize={size} />
         ) : (
-          <DarkModeRoundedIcon fontSize="small" />
+          <DarkModeRoundedIcon fontSize={size} />
         )}
       </IconButton>
     </Stack>

@@ -6,6 +6,7 @@ import {
   Drawer,
   IconButton,
   MenuItem,
+  Stack,
 } from '@mui/material';
 import { PaletteMode } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -37,9 +38,12 @@ const MobileHeader = (props: MobileHeaderProps) => {
 
   return (
     <Box sx={{ display: 'flex' }}>
-      <IconButton aria-label="Menu button" onClick={openDrawer}>
-        <MenuIcon />
-      </IconButton>
+      <Stack direction="row" spacing={1}>
+        <SiteSettingsPanel {...{ colorMode, toggleColorMode }} />
+        <IconButton aria-label="Menu button" onClick={openDrawer}>
+          <MenuIcon />
+        </IconButton>
+      </Stack>
       <Drawer anchor="top" open={open} onClose={closeDrawer}>
         <Box sx={{
           px: { xs: 2, sm: 3 },

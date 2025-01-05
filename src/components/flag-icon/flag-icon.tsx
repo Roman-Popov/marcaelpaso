@@ -10,11 +10,11 @@ const FlagIcon = (props: FlagIconProps) => {
   const { flag, sx } = props;
 
   return (
-    <Icon sx={sx}>
+    <Icon sx={sx} fontSize="inherit">
       <img
         src={`${process.env.PUBLIC_URL}/icons/${flag}.svg`}
         alt={flag}
-        style={{ width: '100%', border: '1px solid #c2c9d6' }}
+        style={{ width: '100%', border: '1px solid #c2c9d6', margin: 'auto' }}
       />
     </Icon>
   );

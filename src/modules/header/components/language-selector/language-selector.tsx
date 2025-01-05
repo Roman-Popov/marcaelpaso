@@ -9,7 +9,13 @@ import {
 import { useTranslation } from 'react-i18next';
 import { FlagIcon } from 'components/flag-icon';
 
-const LanguageSelector = () => {
+type LanguageSelectorProps = {
+  size?: 'small'
+};
+
+const LanguageSelector = (props: LanguageSelectorProps) => {
+  const { size } = props;
+
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
   const { t, i18n } = useTranslation();
@@ -36,9 +42,9 @@ const LanguageSelector = () => {
         onClick={onMenuOpen}
         color="primary"
         aria-label="Change language button"
-        size="small"
+        size={size}
       >
-        <FlagIcon flag={selectedLanguage} />
+        <FlagIcon sx={{ display: 'flex' }} flag={selectedLanguage} />
       </IconButton>
       <Menu
         anchorEl={anchorEl}
