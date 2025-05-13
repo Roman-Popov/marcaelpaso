@@ -7,6 +7,7 @@ import {
   Typography,
 } from '@mui/material';
 import { NoDataBlock } from 'components/no-data-block';
+import { Caption } from 'components/caption';
 import type { PricesDataType } from '../prices-types';
 import { PricesColumn } from './components/prices-column';
 
@@ -42,37 +43,35 @@ const DesktopPrices = (props: DesktopPricesProps) => {
         size={singleCount}
         sx={{ borderRight: '1px solid', borderRightColor: 'divider' }}
       >
-        <Typography
-          fontWeight="bold"
-          fontSize="1.15em"
-          textAlign="center"
+        <Caption
           sx={{
-            borderBottom: '1px solid',
-            borderBottomColor: 'divider',
             ml: 1,
             pr: 1,
+            borderBottom: '1px solid',
+            borderBottomColor: 'divider',
           }}
         >
           {t('prices.singleVisit')}
-        </Typography>
+        </Caption>
       </Grid>
       <Grid size={subscriptionsCount}>
-        <Typography
-          fontWeight="bold"
-          fontSize="1.15em"
-          textAlign="center"
+        <Caption
           sx={{
-            borderBottom: '1px solid',
-            borderBottomColor: 'divider',
             mr: 1,
             pl: 1,
+            borderBottom: '1px solid',
+            borderBottomColor: 'divider',
           }}
         >
           {t('prices.subscriptions')}
-        </Typography>
+        </Caption>
       </Grid>
       <Grid size={titleColumnsCount}>
-        <PricesColumn bold values={[t('prices.amount'), t('prices.validity'), t('prices.price')]} />
+        <PricesColumn
+          captions
+          bold
+          values={[t('prices.amount'), t('prices.validity'), t('prices.price')]}
+        />
       </Grid>
       <Grid size={1}>
         <PricesColumn
@@ -104,20 +103,17 @@ const DesktopPrices = (props: DesktopPricesProps) => {
         <Typography fontSize="0.9em" sx={{ px: 1.5, pt: 1.5 }}>{t('prices.trialDetailed')}</Typography>
       </Grid>
       <Grid offset={titleColumnsCount} size={pricesCount}>
-        <Typography
-          fontWeight="bold"
-          fontSize="1.15em"
-          // textAlign="center"
-          sx={{
-            borderBottom: '1px solid',
-            borderBottomColor: 'divider',
-            mx: 1,
-            pt: 3.5,
-            px: 1.5,
-          }}
+        <Caption sx={{
+          mx: 1,
+          pt: 3.5,
+          px: 1.5,
+          borderBottom: '1px solid',
+          borderBottomColor: 'divider',
+          textAlign: 'left',
+        }}
         >
           {t('prices.personalTitle')}
-        </Typography>
+        </Caption>
       </Grid>
       <Grid offset={titleColumnsCount} size={pricesCount}>
         <Card

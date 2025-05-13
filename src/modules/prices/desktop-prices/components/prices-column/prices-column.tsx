@@ -5,12 +5,14 @@ import {
   Stack,
   Typography,
 } from '@mui/material';
+import { Caption } from 'components/caption';
 import { PriceBlock } from '../../../components/price-block';
 import type { ComparePriceData } from '../../../prices-types';
 import { StyledPriceBox } from '../styled-price-box';
 
 type PricesColumnProps = {
   bold?: boolean,
+  captions?: boolean,
   heading?: string,
   highlighted?: boolean,
   outlined?: boolean,
@@ -20,6 +22,7 @@ type PricesColumnProps = {
 const PricesColumn = (props: PricesColumnProps) => {
   const {
     bold = false,
+    captions = false,
     heading,
     highlighted = false,
     outlined = false,
@@ -70,8 +73,12 @@ const PricesColumn = (props: PricesColumnProps) => {
           {values.map((value = '', index) => (
             // eslint-disable-next-line react/no-array-index-key
             <StyledPriceBox key={index} sx={index === 2 ? { alignItems: 'end', mb: 2 } : {}}>
+              {/* eslint-disable-next-line no-nested-ternary */}
               {typeof value === 'string' || typeof value === 'number'
-                ? (<Typography fontWeight={bold ? 'bold' : 'normal'}>{value}</Typography>)
+                ? (captions
+                  ? <Caption sx={{ fontSize: '0.9rem' }}>{value}</Caption>
+                  : <Typography fontWeight={bold ? 'bold' : 'normal'}>{value}</Typography>
+                )
                 : <PriceBlock price={value} />}
             </StyledPriceBox>
           ))}

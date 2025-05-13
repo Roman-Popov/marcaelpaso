@@ -8,6 +8,7 @@ import {
   Typography,
 } from '@mui/material';
 import { IconFManDancingMedium, IconFWomanDancingLight } from 'react-fluentui-emoji/lib/flat';
+import { Caption } from 'components/caption';
 
 const AboutText = () => {
   const { t } = useTranslation();
@@ -16,7 +17,7 @@ const AboutText = () => {
       variant="outlined"
       sx={[
         (theme) => ({
-          textAlign: 'justify',
+          textAlign: { xs: 'center', sm: 'justify' },
           width: '100%',
           backdropFilter: 'blur(4px)',
           backgroundColor: alpha(theme.palette.grey[50], 0.85),
@@ -42,23 +43,22 @@ const AboutText = () => {
             width: '100%',
             justifyContent: 'center',
             alignItems: 'center',
-            gap: { xs: '2em', sm: '0.5em' },
+            gap: { xs: '1em', sm: '0.5em' },
             textAlign: 'center',
           }}
         >
           <Box sx={{ display: 'flex', fontSize: { xs: '3em', sm: '2em' } }}>
             <IconFManDancingMedium size="1em" />
           </Box>
-          <Typography
+          <Caption
             sx={{
-              fontSize: '1.5em',
-              fontWeight: 'bold',
+              fontSize: '1.3rem',
               textIndent: 0,
               width: { xs: 'min-content', sm: 'auto' },
             }}
           >
             {t('about.p4th')}
-          </Typography>
+          </Caption>
           <Box sx={{ display: 'flex', fontSize: { xs: '3em', sm: '2em' } }}>
             <IconFWomanDancingLight size="1em" />
           </Box>

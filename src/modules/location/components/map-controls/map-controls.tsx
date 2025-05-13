@@ -45,12 +45,16 @@ const MapControls = (props: MapControlsProps) => {
           onClick={onMapReset}
         >
           <Typography
-            sx={{
+            sx={(theme) => ({
               display: 'flex',
               alignItems: 'center',
               gap: 1,
               ':before': { content: 'none' },
-            }}
+              fontFamily: 'Geologica, sans-serif',
+              ...theme.applyStyles('dark', {
+                color: '#CCC',
+              }),
+            })}
             component={Link}
             rel="noopener noreferrer"
             target="_blank"
@@ -73,7 +77,7 @@ const MapControls = (props: MapControlsProps) => {
           <YMapControlButton
             onClick={onMapReset}
           >
-            <Typography>
+            <Typography sx={{ fontFamily: 'Geologica, sans-serif' }}>
               {t('location.resetMap')}
             </Typography>
           </YMapControlButton>

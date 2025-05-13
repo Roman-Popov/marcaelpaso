@@ -175,37 +175,43 @@ export const getDesignTokens = (mode: PaletteMode) => ({
     },
   },
   typography: {
-    fontFamily: ['"Inter", "sans-serif"'].join(','),
+    fontFamily: '"Inter", "sans-serif"',
     mainGreen: {
-      fontFamily: ['"Caveat", "sans-serif"'].join(','),
+      fontFamily: '"EngraversGothicBt", "sans-serif"',
       fontWeight: 900,
       textShadow: mode === 'dark' ? '0 0 15px #12ff00' : 'none',
     },
     h1: {
+      fontFamily: 'Geologica, sans-serif',
       fontSize: customTheme.typography.pxToRem(48),
       fontWeight: 600,
       lineHeight: 1.2,
       letterSpacing: -0.5,
     },
     h2: {
+      fontFamily: 'Geologica, sans-serif',
       fontSize: customTheme.typography.pxToRem(36),
       fontWeight: 600,
       lineHeight: 1.2,
     },
     h3: {
+      fontFamily: 'Geologica, sans-serif',
       fontSize: customTheme.typography.pxToRem(30),
       lineHeight: 1.2,
     },
     h4: {
+      fontFamily: 'Geologica, sans-serif',
       fontSize: customTheme.typography.pxToRem(24),
       fontWeight: 600,
       lineHeight: 1.5,
     },
     h5: {
+      fontFamily: 'Geologica, sans-serif',
       fontSize: customTheme.typography.pxToRem(20),
       fontWeight: 600,
     },
     h6: {
+      fontFamily: 'Geologica, sans-serif',
       fontSize: customTheme.typography.pxToRem(18),
       fontWeight: 600,
     },

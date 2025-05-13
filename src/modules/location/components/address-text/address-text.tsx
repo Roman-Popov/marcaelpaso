@@ -8,6 +8,7 @@ import {
   Typography,
 } from '@mui/material';
 import { CopyAllRounded } from '@mui/icons-material';
+import { Caption } from 'components/caption';
 
 const AddressText = () => {
   const timeoutId = useRef<ReturnType<typeof setTimeout>>();
@@ -48,7 +49,7 @@ const AddressText = () => {
 
   return (
     <>
-      <Typography fontSize="1.15em" fontWeight="bold" sx={{ mb: 1.5 }}>{t('location.address')}</Typography>
+      <Caption sx={{ mb: 1.5, textAlign: 'left' }}>{t('location.address')}</Caption>
       <Typography fontSize="0.8em">{t('location.addressGlobal')}</Typography>
       <Typography component="div" sx={{ mb: 1.5 }}>
         {t('location.addressLocal')}

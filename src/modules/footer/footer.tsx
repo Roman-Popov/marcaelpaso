@@ -22,6 +22,7 @@ const Footer = () => {
           textAlign: 'center',
           py: 0.75,
           fontSize: '0.8em',
+          fontFamily: 'Geologica, sans-serif',
           color: theme.palette.grey[400],
           ...theme.applyStyles('dark', {
             color: theme.palette.grey[600],
@@ -69,7 +70,7 @@ const Footer = () => {
           <Typography
             color="text.secondary"
             textAlign={{ xs: 'center', sm: 'left' }}
-            sx={{ width: '100%' }}
+            sx={{ width: '100%', fontFamily: 'Geologica, sans-serif' }}
           >
             {t('footer.madeWithLove')}
             <IconFOrangeHeart size="1.2em" style={{ verticalAlign: 'sub', margin: '0 0.3em' }} />
@@ -84,6 +85,7 @@ const Footer = () => {
             textAlign: { xs: 'center', sm: 'end' },
             whiteSpace: 'nowrap',
             pl: '2em',
+            fontFamily: 'Geologica, sans-serif',
           }}
         >
           {`© 2022 – ${new Date().getFullYear()}`}

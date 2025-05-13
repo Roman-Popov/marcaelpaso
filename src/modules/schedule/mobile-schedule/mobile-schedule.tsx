@@ -7,6 +7,7 @@ import {
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { NoDataBlock } from 'components/no-data-block';
+import { Caption } from 'components/caption';
 import type { ScheduleDataType } from '../schedule-types';
 
 type MobileScheduleProps = {
@@ -24,9 +25,7 @@ const MobileSchedule = (props: MobileScheduleProps) => {
         scheduleData?.length
           ? scheduleData.map(({ weekday, lessons }) => (
             <Stack key={weekday} spacing={0.5}>
-              <Typography fontWeight="bold" fontSize="1.15em" textAlign="center">
-                {t(`weekdays.${weekday}`)}
-              </Typography>
+              <Caption>{t(`weekdays.${weekday}`)}</Caption>
               <Card
                 variant="outlined"
                 sx={[

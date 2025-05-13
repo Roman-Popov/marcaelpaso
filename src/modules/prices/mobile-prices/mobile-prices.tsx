@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Box, Stack, Typography } from '@mui/material';
 import { Mobile, Tablet } from 'components/responsive-wrappers';
 import { NoDataBlock } from 'components/no-data-block';
+import { Caption } from 'components/caption';
 import type { PricesDataType } from '../prices-types';
 import { PricesRow } from './components/prices-row';
 import { StyledCard } from './components/styled-card';
@@ -23,9 +24,7 @@ const MobilePrices = (props: MobilePricesProps) => {
   return (
     <Stack sx={{ px: { sm: 1 } }} spacing={2.5}>
       <Stack spacing={0.5}>
-        <Typography fontWeight="bold" fontSize="1.15em" textAlign="center">
-          {t('prices.singleVisit')}
-        </Typography>
+        <Caption>{t('prices.singleVisit')}</Caption>
         {trial && oneTime
           ? (
             <>
@@ -60,9 +59,7 @@ const MobilePrices = (props: MobilePricesProps) => {
           )}
       </Stack>
       <Stack spacing={0.5}>
-        <Typography fontWeight="bold" fontSize="1.15em" textAlign="center">
-          {t('prices.subscriptions')}
-        </Typography>
+        <Caption>{t('prices.subscriptions')}</Caption>
         {subscriptions
           ? (
             <>
@@ -98,9 +95,7 @@ const MobilePrices = (props: MobilePricesProps) => {
           )}
       </Stack>
       <Stack spacing={0.5}>
-        <Typography fontWeight="bold" fontSize="1.15em" textAlign="center">
-          {t('prices.personalTitle')}
-        </Typography>
+        <Caption>{t('prices.personalTitle')}</Caption>
         <StyledCard variant="outlined">
           <Typography fontSize="0.9em">{t('prices.personalText')}</Typography>
         </StyledCard>

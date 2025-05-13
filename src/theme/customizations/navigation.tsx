@@ -13,6 +13,7 @@ export const navigationCustomizations: Components<Theme> = {
   MuiMenuItem: {
     styleOverrides: {
       root: ({ theme }) => ({
+        fontFamily: 'Geologica, sans-serif',
         borderRadius: theme.shape.borderRadius,
         padding: '6px 8px',
         [`&.${menuItemClasses.focusVisible}`]: {

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Card, Grid2 as Grid, Typography } from '@mui/material';
+import { Card, Grid2 as Grid } from '@mui/material';
+import { Caption } from 'components/caption';
 import type { LessonType } from '../../../schedule-types';
 import { ScheduleLesson } from '../schedule-lesson';
 
@@ -45,12 +46,9 @@ const ScheduleDay = (props: ScheduleDayProps) => {
           borderColor: 'dividerLight',
         }}
       >
-        <Typography
-          fontWeight="bold"
-          fontSize="1.15em"
-        >
+        <Caption>
           {t(`weekdays.${weekday}`)}
-        </Typography>
+        </Caption>
       </Grid>
       <Grid container size={3} rowSpacing={0}>
         {/* eslint-disable-next-line react/jsx-props-no-spreading, react/no-array-index-key */}

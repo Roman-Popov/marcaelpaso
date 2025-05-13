@@ -229,4 +229,11 @@ export const dataDisplayCustomizations: Components<Theme> = {
       },
     },
   },
+  MuiTooltip: {
+    styleOverrides: {
+      tooltip: {
+        fontFamily: 'Geologica, sans-serif',
+      },
+    },
+  },
 };

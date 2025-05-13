@@ -174,6 +174,7 @@ export const inputsCustomizations: Components<Theme> = {
               variant: 'text',
             },
             style: {
+              fontFamily: 'Geologica, sans-serif !important',
               color: gray[600],
               '&:hover': {
                 backgroundColor: gray[100],
