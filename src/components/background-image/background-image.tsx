@@ -18,10 +18,26 @@ const BackgroundImage = () => (
       backgroundBlendMode: 'lighten',
       backgroundRepeat: 'no-repeat',
       backgroundSize: '100%, auto 60vh, auto 40vh',
-      backgroundPositionX: 'left,left, right',
-      backgroundPositionY: '100%, 100%, 0',
+      backgroundPositionX: '0, 0, 100%',
+      backgroundPositionY: '0, 100%, 0',
       ...theme.applyStyles('light', {
         filter: 'invert(1) hue-rotate(270deg)',
+      }),
+      ...theme.applyStyles('dark', {
+        '@keyframes bgInit': {
+          '0%': {
+            backgroundPositionX: '0, -100%, 200%',
+            backgroundPositionY: '0, 200%, -100%',
+          },
+          '100%': {
+            backgroundPositionX: '0, 0, 100%',
+            backgroundPositionY: '0, 100%, 0',
+          },
+        },
+        backgroundPositionX: '0, -100%, 200%',
+        backgroundPositionY: '0, 200%, -100%',
+        animation: 'bgInit 1s ease-out forwards',
+        animationDelay: '2s',
       }),
     })}
   />
