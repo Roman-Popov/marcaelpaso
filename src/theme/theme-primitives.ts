@@ -179,7 +179,57 @@ export const getDesignTokens = (mode: PaletteMode) => ({
     mainGreen: {
       fontFamily: '"EngraversGothicBt", "sans-serif"',
       fontWeight: 900,
-      textShadow: mode === 'dark' ? '0 0 15px #12ff00' : 'none',
+      '@keyframes light': {
+        '0%': {
+          textShadow: '0 0 5px #12ff00',
+          color: 'white',
+        },
+        '3%': {
+          textShadow: '0 0 0 transparent',
+          color: alpha(gray[600], 0.5),
+        },
+        '6%': {
+          textShadow: '0 0 0 transparent',
+          color: alpha(gray[600], 0.5),
+        },
+        '7%': {
+          textShadow: '0 0 5px #12ff00',
+          color: 'white',
+        },
+        '8%': {
+          textShadow: '0 0 0 transparent',
+          color: alpha(gray[600], 0.5),
+        },
+        '9%': {
+          textShadow: '0 0 5px #12ff00',
+          color: 'white',
+        },
+        '10%': {
+          textShadow: '0 0 0 transparent',
+          color: alpha(gray[600], 0.5),
+        },
+        '20%': {
+          textShadow: '0 0 10px #12ff00',
+          color: 'white',
+        },
+        '50%': {
+          textShadow: '0 0 15px #12ff00',
+          color: 'white',
+        },
+        '99%': {
+          textShadow: '0 0 0 transparent',
+          color: alpha(gray[600], 0.5),
+        },
+        '100%': {
+          textShadow: '0 0 15px #12ff00',
+          color: 'white',
+        },
+      },
+      ...(mode === 'dark' && {
+        color: alpha(gray[600], 0.5),
+        animation: 'light 1s linear forwards',
+        animationDelay: '1s',
+      }),
     },
     h1: {
       fontFamily: 'Geologica, sans-serif',

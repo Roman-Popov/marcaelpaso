@@ -40,7 +40,7 @@ const App = () => {
       <BackgroundImage />
       <Header colorMode={colorMode} toggleColorMode={toggleColorMode} />
       <Box sx={{ position: 'relative', pb: 2 }}>
-        <Stack spacing={10} sx={{ my: 15 }}>
+        <Stack spacing={10} sx={{ my: 20 }}>
           <StudioName />
           <SectionWrapper id="about" header={t('header.about')}>
             <About />
