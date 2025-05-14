@@ -17,6 +17,7 @@ const ScheduleLesson = (props: LessonType) => {
       size={4}
       spacing={2}
       sx={{
+        alignItems: 'center',
         py: 1,
         borderBottom: '1px solid',
         borderColor: 'dividerLight',

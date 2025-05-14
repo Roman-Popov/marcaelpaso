@@ -76,7 +76,7 @@ const PricesColumn = (props: PricesColumnProps) => {
               {/* eslint-disable-next-line no-nested-ternary */}
               {typeof value === 'string' || typeof value === 'number'
                 ? (captions
-                  ? <Caption sx={{ fontSize: '0.9rem' }}>{value}</Caption>
+                  ? <Caption sx={{ fontSize: '0.875rem' }}>{value}</Caption>
                   : <Typography fontWeight={bold ? 'bold' : 'normal'}>{value}</Typography>
                 )
                 : <PriceBlock price={value} />}
