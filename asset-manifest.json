@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.9c65d676.css",
-    "main.js": "/static/js/main.a55a9862.js",
+    "main.js": "/static/js/main.a62b8b57.js",
     "static/js/453.ba8ac962.chunk.js": "/static/js/453.ba8ac962.chunk.js",
     "static/media/geologica.woff2": "/static/media/geologica.b4536af68fc5883b0113.woff2",
     "static/media/engravers-gothic-bt.woff2": "/static/media/engravers-gothic-bt.1af84d41f277446470e5.woff2",
     "index.html": "/index.html",
     "main.9c65d676.css.map": "/static/css/main.9c65d676.css.map",
-    "main.a55a9862.js.map": "/static/js/main.a55a9862.js.map",
+    "main.a62b8b57.js.map": "/static/js/main.a62b8b57.js.map",
     "453.ba8ac962.chunk.js.map": "/static/js/453.ba8ac962.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9c65d676.css",
-    "static/js/main.a55a9862.js"
+    "static/js/main.a62b8b57.js"
   ]
 }
