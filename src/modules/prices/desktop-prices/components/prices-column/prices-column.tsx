@@ -5,6 +5,7 @@ import {
   Stack,
   Typography,
 } from '@mui/material';
+import { dispatchOnContactEvent } from 'helpers/dispatch-on-contact-event';
 import { Caption } from 'components/caption';
 import { PriceBlock } from '../../../components/price-block';
 import type { ComparePriceData } from '../../../prices-types';
@@ -32,6 +33,7 @@ const PricesColumn = (props: PricesColumnProps) => {
   return (
     <Box sx={{ p: 1, pb: 0 }}>
       <Card
+        onClick={dispatchOnContactEvent}
         variant={outlined ? 'outlined' : 'elevation'}
         sx={[
           {

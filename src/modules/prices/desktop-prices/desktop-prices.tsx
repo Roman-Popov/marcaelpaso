@@ -6,6 +6,7 @@ import {
   Grid2 as Grid,
   Typography,
 } from '@mui/material';
+import { dispatchOnContactEvent } from 'helpers/dispatch-on-contact-event';
 import { NoDataBlock } from 'components/no-data-block';
 import { Caption } from 'components/caption';
 import type { PricesDataType } from '../prices-types';
@@ -117,6 +118,7 @@ const DesktopPrices = (props: DesktopPricesProps) => {
       </Grid>
       <Grid offset={titleColumnsCount} size={pricesCount}>
         <Card
+          onClick={dispatchOnContactEvent}
           variant="outlined"
           sx={[
             {

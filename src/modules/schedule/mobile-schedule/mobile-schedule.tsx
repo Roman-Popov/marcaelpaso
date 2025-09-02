@@ -6,6 +6,7 @@ import {
   Typography,
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+import { dispatchOnContactEvent } from 'helpers/dispatch-on-contact-event';
 import { NoDataBlock } from 'components/no-data-block';
 import { Caption } from 'components/caption';
 import type { ScheduleDataType } from '../schedule-types';
@@ -27,6 +28,7 @@ const MobileSchedule = (props: MobileScheduleProps) => {
             <Stack key={weekday} spacing={0.5}>
               <Caption>{t(`weekdays.${weekday}`)}</Caption>
               <Card
+                onClick={dispatchOnContactEvent}
                 variant="outlined"
                 sx={[
                   { px: 0 },

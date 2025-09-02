@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card, Grid2 as Grid } from '@mui/material';
+import { dispatchOnContactEvent } from 'helpers/dispatch-on-contact-event';
 import { Caption } from 'components/caption';
 import type { LessonType } from '../../../schedule-types';
 import { ScheduleLesson } from '../schedule-lesson';
@@ -17,6 +18,7 @@ const ScheduleDay = (props: ScheduleDayProps) => {
 
   return (
     <Grid
+      onClick={dispatchOnContactEvent}
       columns={4}
       container
       size={4}

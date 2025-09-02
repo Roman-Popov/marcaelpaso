@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Box,
   Backdrop,
@@ -28,11 +28,22 @@ const SpeedDial = () => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  useEffect(() => {
+    const handleContactRequest = () => {
+      setOpen(true);
+    };
+    window.addEventListener('onContactRequest', handleContactRequest);
+
+    return () => {
+      window.removeEventListener('onContactRequest', handleContactRequest);
+    };
+  }, []);
+
   const { t } = useTranslation();
 
   return (
     <>
-      <Backdrop open={open} sx={{ zIndex: 1000 }} />
+      <Backdrop open={open} sx={{ zIndex: 1000 }} onClick={handleClose} />
       <Box
         sx={{
           zIndex: 1001,
@@ -45,6 +56,7 @@ const SpeedDial = () => {
             ariaLabel="contacts"
             onClose={handleClose}
             onOpen={handleOpen}
+            open={open}
             sx={{
               position: { xs: 'absolute', xl: 'fixed' },
               right: { xs: 18, sm: 24 },
