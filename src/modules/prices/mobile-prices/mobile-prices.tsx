@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Box, Stack, Typography } from '@mui/material';
-import { dispatchOnContactEvent } from 'helpers/dispatch-on-contact-event';
+import { ContactUs, useContactUs } from 'modules/contact-us';
 import { Mobile, Tablet } from 'components/responsive-wrappers';
 import { NoDataBlock } from 'components/no-data-block';
 import { Caption } from 'components/caption';
@@ -18,6 +18,8 @@ const MobilePrices = (props: MobilePricesProps) => {
 
   const { t } = useTranslation();
 
+  const { closeMenu, menuPosition, openMenu } = useContactUs();
+
   const trial = pricesData?.trial;
   const oneTime = pricesData?.oneTime;
   const subscriptions = pricesData?.subscriptions;
@@ -32,14 +34,15 @@ const MobilePrices = (props: MobilePricesProps) => {
               <Box pr={{ xs: 1, sm: 2 }}>
                 <Typography fontSize="0.6em" textAlign="right">{t('prices.price')}</Typography>
               </Box>
-              <StyledCard onClick={dispatchOnContactEvent} variant="outlined">
+              <StyledCard onClick={openMenu} variant="outlined">
                 <PricesRow title={t('prices.trial')} price={trial.price} />
               </StyledCard>
               <StyledCard
-                onClick={dispatchOnContactEvent}
+                onClick={openMenu}
                 variant="outlined"
                 sx={(theme) => ({
                   borderColor: theme.palette.success.main,
+                  cursor: 'pointer',
                   '&:hover': {
                     boxShadow: `0 0 0 2px inset ${theme.palette.success.light}`,
                     ...(theme.palette.mode === 'dark'
@@ -80,7 +83,7 @@ const MobilePrices = (props: MobilePricesProps) => {
               </Stack>
               {subscriptions.map((subscription, index) => (
                 // eslint-disable-next-line react/no-array-index-key
-                <StyledCard key={index} onClick={dispatchOnContactEvent} variant="outlined">
+                <StyledCard key={index} onClick={openMenu} variant="outlined">
                   <PricesRow
                     price={subscription.price}
                     title={t('prices.amountCount', { count: subscription.amount })}
@@ -98,10 +101,11 @@ const MobilePrices = (props: MobilePricesProps) => {
       </Stack>
       <Stack spacing={0.5}>
         <Caption>{t('prices.personalTitle')}</Caption>
-        <StyledCard onClick={dispatchOnContactEvent} variant="outlined">
+        <StyledCard onClick={openMenu} variant="outlined">
           <Typography fontSize="0.9em">{t('prices.personalText')}</Typography>
         </StyledCard>
       </Stack>
+      <ContactUs menuPosition={menuPosition} handleClose={closeMenu} />
     </Stack>
   );
 };

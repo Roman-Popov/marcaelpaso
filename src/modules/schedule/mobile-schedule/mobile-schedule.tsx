@@ -6,7 +6,7 @@ import {
   Typography,
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import { dispatchOnContactEvent } from 'helpers/dispatch-on-contact-event';
+import { ContactUs, useContactUs } from 'modules/contact-us';
 import { NoDataBlock } from 'components/no-data-block';
 import { Caption } from 'components/caption';
 import type { ScheduleDataType } from '../schedule-types';
@@ -20,6 +20,8 @@ const MobileSchedule = (props: MobileScheduleProps) => {
 
   const { t } = useTranslation();
 
+  const { closeMenu, menuPosition, openMenu } = useContactUs();
+
   return (
     <Stack spacing={2.5}>
       {
@@ -28,10 +30,10 @@ const MobileSchedule = (props: MobileScheduleProps) => {
             <Stack key={weekday} spacing={0.5}>
               <Caption>{t(`weekdays.${weekday}`)}</Caption>
               <Card
-                onClick={dispatchOnContactEvent}
+                onClick={openMenu}
                 variant="outlined"
                 sx={[
-                  { px: 0 },
+                  { px: 0, cursor: 'pointer' },
                   (theme) => ({
                     '&:hover': {
                       boxShadow: `0 0 0 2px inset ${theme.palette.divider}`,
@@ -86,6 +88,7 @@ const MobileSchedule = (props: MobileScheduleProps) => {
           ))
           : <NoDataBlock type={scheduleData ? 'loading' : 'error'} />
       }
+      <ContactUs menuPosition={menuPosition} handleClose={closeMenu} />
     </Stack>
   );
 };

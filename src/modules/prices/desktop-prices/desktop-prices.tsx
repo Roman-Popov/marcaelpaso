@@ -6,7 +6,7 @@ import {
   Grid2 as Grid,
   Typography,
 } from '@mui/material';
-import { dispatchOnContactEvent } from 'helpers/dispatch-on-contact-event';
+import { ContactUs, useContactUs } from 'modules/contact-us';
 import { NoDataBlock } from 'components/no-data-block';
 import { Caption } from 'components/caption';
 import type { PricesDataType } from '../prices-types';
@@ -20,6 +20,8 @@ const DesktopPrices = (props: DesktopPricesProps) => {
   const { pricesData } = props;
 
   const { t } = useTranslation();
+
+  const { closeMenu, menuPosition, openMenu } = useContactUs();
 
   if (!pricesData) {
     return (
@@ -118,7 +120,7 @@ const DesktopPrices = (props: DesktopPricesProps) => {
       </Grid>
       <Grid offset={titleColumnsCount} size={pricesCount}>
         <Card
-          onClick={dispatchOnContactEvent}
+          onClick={openMenu}
           variant="outlined"
           sx={[
             {
@@ -126,6 +128,7 @@ const DesktopPrices = (props: DesktopPricesProps) => {
               mb: 0,
               py: 1,
               px: 1.5,
+              cursor: 'pointer',
             },
             (theme) => ({
               '&:hover': {
@@ -140,6 +143,7 @@ const DesktopPrices = (props: DesktopPricesProps) => {
         >
           <Typography fontSize="0.9em">{t('prices.personalText')}</Typography>
         </Card>
+        <ContactUs menuPosition={menuPosition} handleClose={closeMenu} />
       </Grid>
     </Grid>
   );

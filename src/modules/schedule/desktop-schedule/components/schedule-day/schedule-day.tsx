@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card, Grid2 as Grid } from '@mui/material';
-import { dispatchOnContactEvent } from 'helpers/dispatch-on-contact-event';
+import { ContactUs, useContactUs } from 'modules/contact-us';
 import { Caption } from 'components/caption';
 import type { LessonType } from '../../../schedule-types';
 import { ScheduleLesson } from '../schedule-lesson';
@@ -16,47 +16,52 @@ const ScheduleDay = (props: ScheduleDayProps) => {
 
   const { t } = useTranslation();
 
+  const { closeMenu, menuPosition, openMenu } = useContactUs();
+
   return (
-    <Grid
-      onClick={dispatchOnContactEvent}
-      columns={4}
-      container
-      size={4}
-      spacing={2}
-      component={Card}
-      variant="outlined"
-      sx={[
-        { px: 0 },
-        (theme) => ({
-          '&:hover': {
-            boxShadow: `0 0 0 2px inset ${theme.palette.divider}`,
-            ...(theme.palette.mode === 'dark'
-              ? { bgcolor: theme.palette.grey[900] }
-              : { }
-            ),
-          },
-        }),
-      ]}
-    >
+    <>
       <Grid
-        size={1}
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          borderRight: '1px solid',
-          borderColor: 'dividerLight',
-        }}
+        onClick={openMenu}
+        columns={4}
+        container
+        size={4}
+        spacing={2}
+        component={Card}
+        variant="outlined"
+        sx={[
+          { px: 0, cursor: 'pointer' },
+          (theme) => ({
+            '&:hover': {
+              boxShadow: `0 0 0 2px inset ${theme.palette.divider}`,
+              ...(theme.palette.mode === 'dark'
+                ? { bgcolor: theme.palette.grey[900] }
+                : { }
+              ),
+            },
+          }),
+        ]}
       >
-        <Caption>
-          {t(`weekdays.${weekday}`)}
-        </Caption>
+        <Grid
+          size={1}
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            borderRight: '1px solid',
+            borderColor: 'dividerLight',
+          }}
+        >
+          <Caption>
+            {t(`weekdays.${weekday}`)}
+          </Caption>
+        </Grid>
+        <Grid container size={3} rowSpacing={0}>
+          {/* eslint-disable-next-line react/jsx-props-no-spreading, react/no-array-index-key */}
+          {lessons.map((lesson, i) => <ScheduleLesson {...lesson} key={i} />)}
+        </Grid>
       </Grid>
-      <Grid container size={3} rowSpacing={0}>
-        {/* eslint-disable-next-line react/jsx-props-no-spreading, react/no-array-index-key */}
-        {lessons.map((lesson, i) => <ScheduleLesson {...lesson} key={i} />)}
-      </Grid>
-    </Grid>
+      <ContactUs menuPosition={menuPosition} handleClose={closeMenu} />
+    </>
   );
 };
 

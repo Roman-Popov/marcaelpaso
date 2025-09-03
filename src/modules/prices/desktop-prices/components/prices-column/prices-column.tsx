@@ -5,7 +5,7 @@ import {
   Stack,
   Typography,
 } from '@mui/material';
-import { dispatchOnContactEvent } from 'helpers/dispatch-on-contact-event';
+import { ContactUs, useContactUs } from 'modules/contact-us';
 import { Caption } from 'components/caption';
 import { PriceBlock } from '../../../components/price-block';
 import type { ComparePriceData } from '../../../prices-types';
@@ -30,14 +30,17 @@ const PricesColumn = (props: PricesColumnProps) => {
     values,
   } = props;
 
+  const { closeMenu, menuPosition, openMenu } = useContactUs();
+
   return (
     <Box sx={{ p: 1, pb: 0 }}>
       <Card
-        onClick={dispatchOnContactEvent}
+        onClick={openMenu}
         variant={outlined ? 'outlined' : 'elevation'}
         sx={[
           {
             py: 0,
+            cursor: 'pointer',
             ...(outlined ? {} : { borderColor: 'transparent' }),
           },
           (theme) => ({
@@ -86,6 +89,7 @@ const PricesColumn = (props: PricesColumnProps) => {
           ))}
         </Stack>
       </Card>
+      <ContactUs menuPosition={menuPosition} handleClose={closeMenu} />
     </Box>
   );
 };
